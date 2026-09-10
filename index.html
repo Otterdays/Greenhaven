@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Greenhaven — a 2D online RPG</title>
+  <meta name="description" content="Greenhaven is a local 2D MMORPG. Walk the meadow, meet others in the same world, keep your character.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <a class="brand" href="index.html"><span>✦</span> GREENHAVEN <small>ONLINE RPG</small></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav id="site-nav">
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="play.html">How to play</a>
+      <a href="world.html">The world</a>
+    </nav>
+  </header>
+  <section class="hero">
+    <div>
+      <div class="eyebrow">LOCAL WORLD</div>
+      <h1>A meadow.<br>Then a <em>world</em>.</h1>
+      <p class="lede">Greenhaven is a 2D online RPG you run on your own machine. One shared meadow. Native client. Your character waits until you come back.</p>
+      <div class="actions">
+        <a class="btn primary" href="https://github.com/Otterdays/rpg-mmo-rpg/raw/main/dist/windows/greenhaven.exe" download="greenhaven.exe">Download Windows client</a>
+        <a class="btn" href="play.html">How to play</a>
+        <a class="btn" href="world.html">See the ground</a>
+      </div>
+    </div>
+    <div class="mosaic" aria-hidden="true">
+      <i class="forest"></i><i class="forest"></i><i class="meadow"></i><i class="meadow"></i><i class="trail"></i><i class="meadow"></i><i class="water"></i><i class="forest"></i>
+      <i class="forest"></i><i class="meadow"></i><i class="meadow"></i><i class="trail"></i><i class="trail"></i><i class="timber"></i><i class="water"></i><i class="forest"></i>
+      <i class="meadow"></i><i class="meadow"></i><i class="trail"></i><i class="trail"></i><i class="meadow"></i><i class="timber"></i><i class="water"></i><i class="water"></i>
+      <i class="meadow"></i><i class="trail"></i><i class="trail"></i><i class="meadow"></i><i class="forest"></i><i class="meadow"></i><i class="timber"></i><i class="water"></i>
+      <i class="trail"></i><i class="trail"></i><i class="meadow"></i><i class="forest"></i><i class="forest"></i><i class="meadow"></i><i class="meadow"></i><i class="forest"></i>
+      <i class="meadow"></i><i class="meadow"></i><i class="stone"></i><i class="forest"></i><i class="meadow"></i><i class="meadow"></i><i class="trail"></i><i class="forest"></i>
+      <i class="forest"></i><i class="meadow"></i><i class="meadow"></i><i class="meadow"></i><i class="trail"></i><i class="trail"></i><i class="meadow"></i><i class="forest"></i>
+      <i class="forest"></i><i class="forest"></i><i class="meadow"></i><i class="trail"></i><i class="trail"></i><i class="meadow"></i><i class="forest"></i><i class="forest"></i>
+    </div>
+  </section>
+  <main>
+    <div class="grid">
+      <article>
+        <h2>One world</h2>
+        <p>Everyone shares the same meadow. Where you stand, who you meet, and chat all live in that one place.</p>
+      </article>
+      <article>
+        <h2>Come back</h2>
+        <p>Come back later and your name and place are still there. The meadow does not forget you between sessions.</p>
+      </article>
+      <article>
+        <h2>Same meadow</h2>
+        <p>Open another client and you share one world. Names float above bodies. Chat reaches everyone there.</p>
+      </article>
+    </div>
+  </main>
+  <footer>
+    <span>Greenhaven · a local world</span>
+    <span>© <span id="year">2026</span> local world</span>
+  </footer>
+  <script src="site.js"></script>
+</body>
+</html>
