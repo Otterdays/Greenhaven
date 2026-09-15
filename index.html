@@ -3,63 +3,216 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Greenhaven — a 2D MMORPG</title>
-  <meta name="description" content="Greenhaven is a 2D MMORPG. Walk the meadow, meet other players in the same world, keep your character.">
+  <title>Greenhaven — a native 2D MMORPG</title>
+  <meta name="description" content="Greenhaven is a native 2D MMORPG. Chop, mine, dig and sprint one shared meadow — a Rust world server, a Bevy client, and a character that stays.">
+  <meta name="theme-color" content="#f8f4e9">
+  <meta property="og:title" content="Greenhaven — a native 2D MMORPG">
+  <meta property="og:description" content="One shared meadow, real skill ladders, and a character that is still there tomorrow.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/happy-yak.png">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <script>document.documentElement.classList.add('js')</script>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <a class="brand" href="index.html"><span>✦</span> GREENHAVEN <small>2D MMORPG</small></a>
-    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
-    <nav id="site-nav">
-      <a href="index.html" aria-current="page">Home</a>
-      <a href="play.html">How to play</a>
-      <a href="world.html">The world</a>
-    </nav>
+  <header class="site" id="header">
+    <div class="shell">
+      <a class="brand" href="index.html">
+        <span class="mark" aria-hidden="true"><svg viewBox="0 0 64 64" fill="none"><circle cx="32" cy="32" r="10" fill="#d9a544"/><g stroke="#d9a544" stroke-width="5" stroke-linecap="round"><path d="M32 8v7M32 49v7M8 32h7M49 32h7"/><path d="M15 15l5 5M44 44l5 5M49 15l-5 5M20 44l-5 5"/></g></svg></span>
+        GREENHAVEN <small>2D MMORPG</small>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav class="top" id="site-nav">
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="play.html">How to play</a>
+        <a href="world.html">The world</a>
+        <a class="btn primary sm" href="#download">Download</a>
+      </nav>
+    </div>
   </header>
+
   <section class="hero">
-    <div>
-      <div class="eyebrow">A 2D MMORPG</div>
-      <h1>A meadow.<br>Then a <em>world</em>.</h1>
-      <p class="lede">Greenhaven is a 2D MMORPG you run on your own machine. One shared meadow. Native client. Your character waits until you come back.</p>
-      <div class="actions">
-        <a class="btn primary" href="https://drive.google.com/file/d/1PjvRo1La3aveVYsZ2nTJfuOF-TC_tC--/view?usp=drive_link">Download Windows</a>
-        <a class="btn primary" href="downloads/greenhaven-linux" download="greenhaven">Download Linux</a>
-        <a class="btn" href="play.html">How to play</a>
-        <a class="btn" href="world.html">See the ground</a>
+    <div class="shell">
+      <div>
+        <div class="eyebrow">A Happy Yak Productions game</div>
+        <h1>A meadow.<br>Then a <em>world</em>.</h1>
+        <p class="lede">Greenhaven is a native 2D MMORPG you run on your own machine. One shared meadow, three skill ladders under your feet, and a character that is still there tomorrow.</p>
+        <div class="actions">
+          <a class="btn primary" href="https://www.dropbox.com/scl/fi/8addy1wyyosbfo4j39eez/greenhaven.exe?rlkey=6pqym6i87bpl7xhjh7uzyyqxk&amp;st=68kyv7sz&amp;dl=0">Download for Windows</a>
+          <a class="btn ghost" href="play.html">How to play</a>
+        </div>
+        <p class="platforms"><span>Windows &amp; Linux clients</span><span>Native Rust + Bevy</span><span>Saves every visit</span></p>
+      </div>
+      <div class="stage">
+        <div class="window">
+          <div class="bar" aria-hidden="true"><i></i><i></i><i></i><span class="title">greenhaven — deepwood</span></div>
+          <img src="assets/gameplay.gif" width="480" height="300" alt="Greenhaven gameplay — a character walking the meadow">
+        </div>
+        <span class="chip xp" aria-hidden="true"><b>+25</b> woodcutting</span>
+        <span class="chip stride" aria-hidden="true"><b>+4</b> stride</span>
       </div>
     </div>
-    <div class="mosaic" aria-hidden="true">
-      <i class="forest"></i><i class="forest"></i><i class="meadow"></i><i class="meadow"></i><i class="trail"></i><i class="meadow"></i><i class="water"></i><i class="forest"></i>
-      <i class="forest"></i><i class="meadow"></i><i class="meadow"></i><i class="trail"></i><i class="trail"></i><i class="timber"></i><i class="water"></i><i class="forest"></i>
-      <i class="meadow"></i><i class="meadow"></i><i class="trail"></i><i class="trail"></i><i class="meadow"></i><i class="timber"></i><i class="water"></i><i class="water"></i>
-      <i class="meadow"></i><i class="trail"></i><i class="trail"></i><i class="meadow"></i><i class="forest"></i><i class="meadow"></i><i class="timber"></i><i class="water"></i>
-      <i class="trail"></i><i class="trail"></i><i class="meadow"></i><i class="forest"></i><i class="forest"></i><i class="meadow"></i><i class="meadow"></i><i class="forest"></i>
-      <i class="meadow"></i><i class="meadow"></i><i class="stone"></i><i class="forest"></i><i class="meadow"></i><i class="meadow"></i><i class="trail"></i><i class="forest"></i>
-      <i class="forest"></i><i class="meadow"></i><i class="meadow"></i><i class="meadow"></i><i class="trail"></i><i class="trail"></i><i class="meadow"></i><i class="forest"></i>
-      <i class="forest"></i><i class="forest"></i><i class="meadow"></i><i class="trail"></i><i class="trail"></i><i class="meadow"></i><i class="forest"></i><i class="forest"></i>
+  </section>
+
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-track">
+      <div class="ticker-group">
+        <span>Woodcutting</span><i>✦</i><span>Mining</span><i>✦</i><span>Digging</span><i>✦</i><span>Stride</span><i>✦</i><span>First person</span><i>✦</i><span>World map</span><i>✦</i><span>Live chat</span><i>✦</i><span>Saved characters</span><i>✦</i><span>One shared meadow</span><i>✦</i>
+      </div>
+      <div class="ticker-group">
+        <span>Woodcutting</span><i>✦</i><span>Mining</span><i>✦</i><span>Digging</span><i>✦</i><span>Stride</span><i>✦</i><span>First person</span><i>✦</i><span>World map</span><i>✦</i><span>Live chat</span><i>✦</i><span>Saved characters</span><i>✦</i><span>One shared meadow</span><i>✦</i>
+      </div>
+    </div>
+  </div>
+
+  <section class="sec">
+    <div class="shell">
+      <div class="sec-head reveal">
+        <div class="eyebrow">What you can do</div>
+        <h2 class="sec-title">Small verbs. A real world.</h2>
+        <p class="sec-sub">You wake in the wood, walk out along one faint track, and the meadow is already busy being a place — with other players in it, or without.</p>
+      </div>
+      <div class="grid-3">
+        <article class="card reveal">
+          <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M16.2 7.8l-2.1 6.3-6.3 2.1 2.1-6.3z"/></svg></span>
+          <h3>The world decides</h3>
+          <p>You send where you want to go; the world server decides where you stand. No slipping through a tree on the diagonal.</p>
+        </article>
+        <article class="card reveal" style="--d:.08s">
+          <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg></span>
+          <h3>Characters that stay</h3>
+          <p>Your name, place, skills and coins are saved with every visit. The meadow does not forget you between sessions.</p>
+        </article>
+        <article class="card reveal" style="--d:.16s">
+          <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 7 11h3l-4 6h12l-4-6h3z"/><path d="M12 17v4"/></svg></span>
+          <h3>Chop, mine, dig</h3>
+          <p>Swing at a young oak once a second, mine copper at level 1 and diamond at 90, and dig sand and clay out of the ground.</p>
+        </article>
+        <article class="card reveal">
+          <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9h9a3 3 0 1 0-3-3"/><path d="M4 14h13a3 3 0 1 1-3 3"/></svg></span>
+          <h3>Sprint the trails</h3>
+          <p>Hold Shift to run at double speed. Fresh ground under your feet trains Stride — loops around one tile pay nothing.</p>
+        </article>
+        <article class="card reveal" style="--d:.08s">
+          <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg></span>
+          <h3>Talk to the meadow</h3>
+          <p>Enter opens chat and reaches everyone in the world. Villagers can talk back, and some keep shops — you start with 100 coins.</p>
+        </article>
+        <article class="card reveal" style="--d:.16s">
+          <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg></span>
+          <h3>Look closer</h3>
+          <p>Press F5 to stand inside your character's eyes, M for the full world map, P for your skills sheet. F1 shows every key.</p>
+        </article>
+      </div>
     </div>
   </section>
-  <main>
-    <div class="grid">
-      <article>
-        <h2>One world</h2>
-        <p>Everyone shares the same meadow. Where you stand, who you meet, and chat all live in that one place.</p>
-      </article>
-      <article>
-        <h2>Come back</h2>
-        <p>Come back later and your name and place are still there. The meadow does not forget you between sessions.</p>
-      </article>
-      <article>
-        <h2>Same meadow</h2>
-        <p>Open another client and you share one world. Names float above bodies. Chat reaches everyone there.</p>
-      </article>
+
+  <section class="sec dark">
+    <div class="fireflies" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+    <div class="shell">
+      <div class="sec-head reveal">
+        <div class="eyebrow">Skill ladders</div>
+        <h2 class="sec-title">Train while you wander.</h2>
+        <p class="sec-sub">Every skill climbs to 99 and every point of XP is saved. Pick a habit and the meadow pays you back.</p>
+      </div>
+      <div class="skill-grid">
+        <article class="skill reveal">
+          <span class="lvl">Level 1 - 99</span>
+          <h3>Woodcutting</h3>
+          <p>Nine tree kinds, one every ten levels — from the young oak by your first campfire to the elderwood at 80.</p>
+          <div class="bar" aria-hidden="true"><i data-fill="78"></i></div>
+          <div class="xp"><span>+25 to +285 per chop</span><span>nine trees</span></div>
+        </article>
+        <article class="skill reveal" style="--d:.1s">
+          <span class="lvl">Level 1 - 99</span>
+          <h3>Mining</h3>
+          <p>Twelve rock kinds from copper at level 1 to diamond at 90. One mine per second, and the rocks never run out.</p>
+          <div class="bar" aria-hidden="true"><i data-fill="62"></i></div>
+          <div class="xp"><span>copper to diamond</span><span>twelve rocks</span></div>
+        </article>
+        <article class="skill reveal" style="--d:.2s">
+          <span class="lvl">Level 1 - 99</span>
+          <h3>Stride</h3>
+          <p>Hold Shift to sprint at 2x walk speed. A fresh cell pays +4 Stride XP; warm ground pays breath back, not XP.</p>
+          <div class="bar" aria-hidden="true"><i data-fill="45"></i></div>
+          <div class="xp"><span>+4 per fresh cell</span><span>2.5s warm trail</span></div>
+        </article>
+      </div>
     </div>
-  </main>
-  <footer>
-    <span>Greenhaven · a 2D MMORPG</span>
-    <span><a href="https://github.com/Otterdays/Greenhaven-MMORPG">Project on GitHub</a></span>
-    <span>© <span id="year">2026</span> Greenhaven</span>
+  </section>
+
+  <section class="sec">
+    <div class="shell">
+      <div class="stats reveal">
+        <div class="stat"><b><span class="count" data-to="250">0</span><i>&times;250</i></b><span>tiles of hand-built world</span></div>
+        <div class="stat"><b class="count" data-to="99">0</b><span>levels on every skill</span></div>
+        <div class="stat"><b class="count" data-to="9">0</b><span>cuttable tree kinds</span></div>
+        <div class="stat"><b class="count" data-to="12">0</b><span>mineable rock kinds</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="shell split">
+      <div class="reveal">
+        <div class="eyebrow">The world</div>
+        <h2 class="sec-title">Waking up in Deepwood.</h2>
+        <p class="sec-sub">You open your eyes in a hidden clearing: a cold campfire, four young oaks, one faint track out. Beyond it waits a 250&times;250 world — a decked village square, a ring road, three timber bridges over the river, a lake with piers, an orchard, a stone circle and a quarry full of ore.</p>
+        <div class="actions">
+          <a class="btn ghost" href="world.html">Explore the world</a>
+        </div>
+      </div>
+      <div class="mosaic-figure reveal" style="--d:.12s" aria-hidden="true">
+        <div class="tiles">
+          <i class="fo"></i><i class="fo"></i><i class="fo"></i><i class="fo"></i><i></i><i></i><i class="fo"></i><i class="fo"></i><i class="fo"></i>
+          <i class="fo"></i><i class="fo"></i><i></i><i></i><i></i><i class="t2"></i><i></i><i class="fo"></i><i class="fo"></i>
+          <i></i><i></i><i class="t2"></i><i class="tr"></i><i class="tr"></i><i></i><i></i><i></i><i></i>
+          <i></i><i class="wat"></i><i class="wat"></i><i class="wat"></i><i class="ti"></i><i class="wat"></i><i class="wat"></i><i></i><i class="st"></i>
+          <i></i><i class="wat"></i><i class="wat"></i><i class="wat"></i><i class="wat"></i><i class="wat"></i><i></i><i class="st"></i><i class="st"></i>
+          <i></i><i></i><i class="tr"></i><i class="tr"></i><i></i><i></i><i></i><i class="st"></i><i></i>
+          <i></i><i class="fire"></i><i></i><i></i><i></i><i class="tr"></i><i class="tr"></i><i></i><i></i>
+        </div>
+        <span class="walker"></span>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="download">
+    <div class="shell">
+      <div class="cta reveal">
+        <div class="fireflies" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+        <div class="eyebrow">Play now</div>
+        <h2>The meadow is open.</h2>
+        <p>Download the native client, pick a name, and wake up in Deepwood. Windows and Linux today.</p>
+        <div class="actions center">
+          <a class="btn gold" href="https://www.dropbox.com/scl/fi/8addy1wyyosbfo4j39eez/greenhaven.exe?rlkey=6pqym6i87bpl7xhjh7uzyyqxk&amp;st=68kyv7sz&amp;dl=0">Download for Windows</a>
+          <a class="btn ghost-dark" href="downloads/greenhaven-linux" download="greenhaven">Download for Linux</a>
+          <a class="btn ghost-dark" href="play.html">How to play</a>
+        </div>
+        <p class="micro">Windows release available now. The Linux client is still under development.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site">
+    <div class="shell foot">
+      <div class="f-brand">
+        <img class="yak" src="assets/happy-yak.png" alt="Happy Yak Productions mascot — a highland yak with a green travel pack">
+        <div>
+          <strong>GREENHAVEN</strong>
+          <span>A Happy Yak Productions game<br>Otterdays — Main &amp; Lead Developer</span>
+        </div>
+      </div>
+      <nav class="f-links">
+        <a href="play.html">How to play</a>
+        <a href="world.html">The world</a>
+        <a href="#download">Download</a>
+      </nav>
+      <div class="f-meta">
+        <span>&copy; <span id="year">2026</span> Happy Yak Productions</span>
+        <span>Rust world server &middot; Bevy client &middot; SQLite saves</span>
+      </div>
+    </div>
   </footer>
   <script src="site.js"></script>
 </body>

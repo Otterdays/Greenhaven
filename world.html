@@ -4,38 +4,144 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>The world — Greenhaven</title>
-  <meta name="description" content="Greenhaven MMORPG world: meadow, trail, and what stops you.">
+  <meta name="description" content="The Greenhaven MMORPG world: a 250x250 tile map — village square, ring road, three timber bridges, a lake with piers, a quarry, and the Deepwood clearing where you wake up.">
+  <meta name="theme-color" content="#f8f4e9">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <script>document.documentElement.classList.add('js')</script>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <a class="brand" href="index.html"><span>✦</span> GREENHAVEN <small>2D MMORPG</small></a>
-    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
-    <nav id="site-nav">
-      <a href="index.html">Home</a>
-      <a href="play.html">How to play</a>
-      <a href="world.html" aria-current="page">The world</a>
-    </nav>
+  <header class="site" id="header">
+    <div class="shell">
+      <a class="brand" href="index.html">
+        <span class="mark" aria-hidden="true"><svg viewBox="0 0 64 64" fill="none"><circle cx="32" cy="32" r="10" fill="#d9a544"/><g stroke="#d9a544" stroke-width="5" stroke-linecap="round"><path d="M32 8v7M32 49v7M8 32h7M49 32h7"/><path d="M15 15l5 5M44 44l5 5M49 15l-5 5M20 44l-5 5"/></g></svg></span>
+        GREENHAVEN <small>2D MMORPG</small>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav class="top" id="site-nav">
+        <a href="index.html">Home</a>
+        <a href="play.html">How to play</a>
+        <a href="world.html" aria-current="page">The world</a>
+        <a class="btn primary sm" href="#download">Download</a>
+      </nav>
+    </div>
   </header>
-  <main class="page">
-    <div class="eyebrow">OVERWORLD</div>
-    <h1>The world</h1>
-    <p>The meadow of Greenhaven: a wall of trees, a river, a timber crossing. Walk the grass and trails. The water and the woods stop you.</p>
-    <h2>Ground</h2>
-    <ul>
-      <li><strong>Meadow, trail, timber</strong> — walkable.</li>
-      <li><strong>Water, forest, stone</strong> — they stop you. You begin on ground you can walk.</li>
-    </ul>
-    <h2>Who is in charge</h2>
-    <p>You send where you want to go. The world decides where you stand, so you cannot slip through a tree on the diagonal.</p>
-    <h2>Futures</h2>
-    <p>Six seats by the fire are saved: Nick the master mechanic and gamer, Kate the methodical organizer, Lytle the determined protector, Bianca the mother goose, Remington the aspiring young mind, and Nate the house painter (Killa). They are loved in the developer's life; someday, echoes of them may walk the meadow.</p>
-    <p><a class="btn primary" href="play.html">How to play</a></p>
+
+  <main>
+    <section class="page-head">
+      <div class="shell">
+        <div class="eyebrow">Overworld</div>
+        <h1>The world</h1>
+        <p class="lede">A 250&times;250 map you can walk end to end: a decked village square at the centre, a ring road, a winding river with three timber bridges &mdash; and Deepwood, the clearing where you wake up.</p>
+      </div>
+    </section>
+
+    <section class="sec">
+      <div class="shell">
+        <div class="grid-3">
+          <article class="card reveal">
+            <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17c3-2 6-2 9-4s6-2 9-4"/><path d="M3 12c3-2 6-2 9-4s6-2 9-4"/></svg></span>
+            <h3>The ground carries you</h3>
+            <ul class="ticks">
+              <li>Meadow, trail and road</li>
+              <li>Boardwalk, dock and corduroy</li>
+              <li>Timber bridges over the river</li>
+            </ul>
+          </article>
+          <article class="card reveal" style="--d:.08s">
+            <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 7 11h3l-4 6h12l-4-6h3z"/><path d="M12 17v4"/><path d="M3 20h7M14 20h7"/></svg></span>
+            <h3>These stop you</h3>
+            <ul class="ticks">
+              <li>Water and fishing spots</li>
+              <li>Forest and old-growth trees</li>
+              <li>Stone, rocks and clay mounds</li>
+            </ul>
+          </article>
+          <article class="card reveal" style="--d:.16s">
+            <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M16.2 7.8l-2.1 6.3-6.3 2.1 2.1-6.3z"/></svg></span>
+            <h3>Who is in charge</h3>
+            <p>You send where you want to go. The world decides where you stand, so you cannot slip through a tree on the diagonal.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec">
+      <div class="shell">
+        <div class="sec-head reveal">
+          <div class="eyebrow">Landmarks</div>
+          <h2 class="sec-title">What is out there.</h2>
+          <p class="sec-sub">Colours change, the path bends, and something worth clicking waits at almost every turn.</p>
+        </div>
+        <div class="duo">
+          <article class="card reveal">
+            <h3>Across the map</h3>
+            <ul class="ticks">
+              <li>A decked village square with four gate roads and a ring road around it.</li>
+              <li>A winding river crossed by three timber bridges.</li>
+              <li>A south-west lake with two piers and a promenade.</li>
+              <li>An orchard in the north-west, and a farmstead with a herd pen.</li>
+            </ul>
+          </article>
+          <article class="card reveal" style="--d:.1s">
+            <h3>Worth the walk</h3>
+            <ul class="ticks">
+              <li>A stone circle standing quiet in the fields.</li>
+              <li>A south-east quarry stacked with ore and gem veins.</li>
+              <li>A north-east birch grove around a small pond.</li>
+              <li>Deepwood: old-growth, a cold campfire, four young oaks, and one faint track out.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec">
+      <div class="shell">
+        <div class="futures reveal">
+          <h2>Six seats by the fire</h2>
+          <p>Saved for later: <em>Nick</em> the master mechanic and gamer, <em>Kate</em> the methodical organizer, <em>Lytle</em> the determined protector, <em>Bianca</em> the mother goose, <em>Remington</em> the aspiring young mind, and <em>Nate</em> the house painter (Killa). They are loved in the developer's life; someday, echoes of them may walk the meadow.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec" id="download">
+      <div class="shell">
+        <div class="cta reveal">
+          <div class="fireflies" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+          <div class="eyebrow">Play now</div>
+          <h2>Walk it yourself.</h2>
+          <p>Download the native client and the first thing you will see is Deepwood. Everything after that is up to your feet.</p>
+          <div class="actions center">
+            <a class="btn gold" href="https://www.dropbox.com/scl/fi/8addy1wyyosbfo4j39eez/greenhaven.exe?rlkey=6pqym6i87bpl7xhjh7uzyyqxk&amp;st=68kyv7sz&amp;dl=0">Download for Windows</a>
+            <a class="btn ghost-dark" href="downloads/greenhaven-linux" download="greenhaven">Download for Linux</a>
+            <a class="btn ghost-dark" href="play.html">How to play</a>
+          </div>
+          <p class="micro">Windows release available now. The Linux client is still under development.</p>
+        </div>
+      </div>
+    </section>
   </main>
-  <footer>
-    <span>Walkable: meadow, trail, timber. Water, forest, stone stop you.</span>
-    <span><a href="https://github.com/Otterdays/Greenhaven-MMORPG">Project on GitHub</a></span>
-    <span>© <span id="year">2026</span> Greenhaven</span>
+
+  <footer class="site">
+    <div class="shell foot">
+      <div class="f-brand">
+        <img class="yak" src="assets/happy-yak.png" alt="Happy Yak Productions mascot — a highland yak with a green travel pack">
+        <div>
+          <strong>GREENHAVEN</strong>
+          <span>A Happy Yak Productions game<br>Otterdays — Main &amp; Lead Developer</span>
+        </div>
+      </div>
+      <nav class="f-links">
+        <a href="play.html">How to play</a>
+        <a href="world.html">The world</a>
+        <a href="#download">Download</a>
+      </nav>
+      <div class="f-meta">
+        <span>&copy; <span id="year">2026</span> Happy Yak Productions</span>
+        <span>Rust world server &middot; Bevy client &middot; SQLite saves</span>
+      </div>
+    </div>
   </footer>
   <script src="site.js"></script>
 </body>
