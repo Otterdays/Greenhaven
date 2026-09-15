@@ -1,6 +1,6 @@
 # Greenhaven
 
-Public porch site for Greenhaven: a local 2D online RPG.
+Public porch site for Greenhaven: a 2D MMORPG.
 
 Live pages: home, how to play, the world.
 
@@ -8,4 +8,4 @@ Downloads: Windows release on Google Drive (https://drive.google.com/file/d/1Pjv
 
 The native client is not this site.
 
-Game source: https://github.com/Otterdays/rpg-mmo-rpg
+Game source: https://github.com/Otterdays/Greenhaven-MMORPG
