@@ -1,8 +1,8 @@
 # Greenhaven
 
-A native 2D MMORPG built with Rust and Bevy. One shared meadow, four skill ladders, three worlds on one account, and a character that stays.
+## **[Play on the website — otterdays.github.io/Greenhaven](https://otterdays.github.io/Greenhaven/)**
 
-**Website:** <https://otterdays.github.io/Greenhaven/>
+A native 2D MMORPG built with Rust and Bevy. One shared meadow, four skill ladders, three worlds on one account, and a character that stays.
 
 ## Downloads
 
