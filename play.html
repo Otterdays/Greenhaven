@@ -1,20 +1,24 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>How to play — Greenhaven</title>
-  <meta name="description" content="Download the Greenhaven client, pick a name, and walk the meadow. WASD to move, Shift to sprint, Enter to chat.">
-  <meta name="theme-color" content="#f8f4e9">
+  <meta name="description" content="Download the native Greenhaven client, make an account or wander Single player, and learn every key: chat, sprint, skills, first person, world map.">
+  <meta name="theme-color" content="#0c1510">
+  <meta property="og:title" content="How to play — Greenhaven">
+  <meta property="og:description" content="From download to Deepwood in three steps, plus every key you need.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://otterdays.github.io/Greenhaven/assets/happy-yak.png">
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-  <script>document.documentElement.classList.add('js')</script>
+  <script>document.documentElement.classList.replace('no-js','js')</script>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header class="site" id="header">
     <div class="shell">
       <a class="brand" href="index.html">
-        <span class="mark" aria-hidden="true"><svg viewBox="0 0 64 64" fill="none"><circle cx="32" cy="32" r="10" fill="#d9a544"/><g stroke="#d9a544" stroke-width="5" stroke-linecap="round"><path d="M32 8v7M32 49v7M8 32h7M49 32h7"/><path d="M15 15l5 5M44 44l5 5M49 15l-5 5M20 44l-5 5"/></g></svg></span>
+        <span class="mark" aria-hidden="true"><svg viewBox="0 0 64 64" fill="none"><circle cx="32" cy="32" r="10" fill="#e5b551"/><g stroke="#e5b551" stroke-width="5" stroke-linecap="round"><path d="M32 8v7M32 49v7M8 32h7M49 32h7"/><path d="M15 15l5 5M44 44l5 5M49 15l-5 5M20 44l-5 5"/></g></svg></span>
         GREENHAVEN <small>2D MMORPG</small>
       </a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
@@ -22,78 +26,79 @@
         <a href="index.html">Home</a>
         <a href="play.html" aria-current="page">How to play</a>
         <a href="world.html">The world</a>
-        <a class="btn primary sm" href="#download">Download</a>
+        <a href="index.html#skills">Skills</a>
+        <a class="btn gold sm" href="#download">Download</a>
       </nav>
     </div>
   </header>
 
   <div class="announce" role="status">
     <span class="dot" aria-hidden="true"></span>
-    <span>Now available on <strong>Windows</strong> &amp; <strong>Linux</strong></span>
-    <span class="badge">v0.1.7</span>
+    <span><strong>v0.1.10</strong> — one PLAY button, three worlds, fishing, and a hello from the dev</span>
+    <span class="badge">EARLY DEV</span>
   </div>
 
   <main>
     <section class="page-head">
+      <div class="stars" aria-hidden="true" id="stars"></div>
       <div class="shell">
         <div class="eyebrow">Getting started</div>
-        <h1>How to play</h1>
-        <p class="lede">Greenhaven is a native window, not this site. Download the client, pick a name, and you are standing in the meadow.</p>
+        <h1>From download<br>to <em>Deepwood</em>.</h1>
+        <p class="lede">Greenhaven is a native window, not this site. Download the client, pick a name, and you are standing in the meadow. Ten minutes, start to first chop.</p>
         <div class="actions">
-          <a class="btn primary" href="https://www.dropbox.com/scl/fi/5wnbg2ie49hfur2c7x07w/GreenhavenSetup.exe?rlkey=voe5gilo3is6j5h95es1tyhab&amp;st=x2enkdfn&amp;dl=0">Download for Windows</a>
-          <a class="btn primary" href="https://www.dropbox.com/scl/fi/879lr5t2764r40r1vs7pr/Greenhaven-linux-20260917.tar.gz?rlkey=p2utkld8kdhymnxmqbs8xuqi9&amp;st=f24wg89z&amp;dl=1">Download for Linux</a>
+          <a class="btn gold" href="https://www.dropbox.com/scl/fi/5wnbg2ie49hfur2c7x07w/GreenhavenSetup.exe?rlkey=voe5gilo3is6j5h95es1tyhab&amp;st=x2enkdfn&amp;dl=1">Download for Windows</a>
+          <a class="btn moss" href="https://www.dropbox.com/scl/fi/879lr5t2764r40r1vs7pr/Greenhaven-linux-20260917.tar.gz?rlkey=p2utkld8kdhymnxmqbs8xuqi9&amp;st=f24wg89z&amp;dl=1">Download for Linux</a>
         </div>
       </div>
     </section>
 
-    <section class="sec">
+    <section class="sec tight">
       <div class="shell">
         <div class="sec-head reveal">
           <div class="eyebrow">Three steps</div>
-          <h2 class="sec-title">From download to Deepwood.</h2>
+          <h2 class="sec-title">Open. Name. <em>Play</em>.</h2>
         </div>
         <ol class="steps">
           <li class="step reveal">
             <span class="num">1</span>
-            <div>
-              <h3>Open the client</h3>
-              <p>A short illustrated opening plays first — click anywhere, or press Space or Esc to skip it. You land on the main menu.</p>
-            </div>
+            <h3>Open the client</h3>
+            <p>A short illustrated opening plays first — click anywhere, or press <kbd>Space</kbd> or <kbd>Esc</kbd> to skip it. You land on the main menu, and a small card from the dev says hello once per launch.</p>
+            <p class="sub">Windows: run <code>GreenhavenSetup.exe</code>. Linux: untar, <code>chmod +x greenhaven</code>, run it.</p>
           </li>
           <li class="step reveal" style="--d:.08s">
             <span class="num">2</span>
-            <div>
-              <h3>Name your character</h3>
-              <p>1–20 letters, numbers, spaces, - or _. Whatever you pick floats above your head in the world.</p>
-            </div>
+            <h3>Log in, or don't</h3>
+            <p><strong>Play</strong> asks for an account so your character is kept across visits and worlds — create one right there. Tick <em>Remember username</em> and the name is filled in next time. Passwords are never saved.</p>
+            <p class="sub"><strong>Single player</strong> needs nothing. It walks the map with no server and nothing on the wire.</p>
           </li>
           <li class="step reveal" style="--d:.16s">
             <span class="num">3</span>
-            <div>
-              <h3>Play, or wander Single player</h3>
-              <p>Play joins the world server when it is running. Single player walks the demo map with no server at all. Quit or Esc leaves.</p>
-            </div>
+            <h3>Pick a world, pick a name</h3>
+            <p>Press <strong>PLAY</strong> and the world chooser opens with each world's live status. Your pick is remembered. Then a name: 1–20 letters, numbers, spaces, <code>-</code> or <code>_</code>. It floats above your head from then on.</p>
+            <p class="sub">Three worlds, one Ottertown. Your account works on all of them.</p>
           </li>
         </ol>
       </div>
     </section>
 
-    <section class="sec">
+    <section class="sec band">
       <div class="shell">
         <div class="sec-head reveal">
           <div class="eyebrow">Controls</div>
-          <h2 class="sec-title">Every key you need.</h2>
-          <p class="sec-sub">The hint chips in the bottom corner of the game show these too, and F1 lists the rest.</p>
+          <h2 class="sec-title">Every key you <em>need</em>.</h2>
+          <p class="sec-sub">The hint chips in the bottom corner of the game show these too, and <kbd>F1</kbd> lists the rest.</p>
         </div>
         <div class="controls reveal">
-          <div class="ctrl">Move <span class="key">WASD / arrows</span></div>
-          <div class="ctrl">Sprint (2x speed) <span class="key">Shift</span></div>
-          <div class="ctrl">Chat <span class="key">Enter</span></div>
-          <div class="ctrl">Skills sheet <span class="key">P</span></div>
-          <div class="ctrl">World map <span class="key">M</span></div>
-          <div class="ctrl">First person <span class="key">F5</span></div>
-          <div class="ctrl">Pause / menu <span class="key">Esc</span></div>
-          <div class="ctrl">Inspect, chop, mine, dig <span class="key">Click</span></div>
+          <div class="ctrl">Move <span class="keys"><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> <kbd>↑←↓→</kbd></span></div>
+          <div class="ctrl">Sprint (2× speed, trains Stride) <span class="keys"><kbd>Shift</kbd></span></div>
+          <div class="ctrl">Chat with your world <span class="keys"><kbd>Enter</kbd></span></div>
+          <div class="ctrl">Skills sheet <span class="keys"><kbd>P</kbd></span></div>
+          <div class="ctrl">World map <span class="keys"><kbd>M</kbd></span></div>
+          <div class="ctrl">First person <span class="keys"><kbd>F5</kbd></span></div>
+          <div class="ctrl">Every key <span class="keys"><kbd>F1</kbd></span></div>
+          <div class="ctrl">Pause / menu / leave <span class="keys"><kbd>Esc</kbd></span></div>
+          <div class="ctrl">Inspect, chop, mine, dig, cast, talk <span class="keys"><kbd>Click</kbd></span></div>
+          <div class="ctrl">Skip the opening <span class="keys"><kbd>Space</kbd> <kbd>Esc</kbd></span></div>
         </div>
       </div>
     </section>
@@ -102,18 +107,43 @@
       <div class="shell">
         <div class="sec-head reveal">
           <div class="eyebrow">In the meadow</div>
-          <h2 class="sec-title">What happens when you click.</h2>
+          <h2 class="sec-title">What happens when you <em>click</em>.</h2>
         </div>
-        <ul class="ticks reveal">
-          <li>Click a young oak to chop — your axe swings, leaves shake, and XP floats up over your head.</li>
-          <li>Click rocks to mine. Copper opens at level 1 and diamond at 90, and the rocks never run out.</li>
-          <li>Click sand or clay to dig; the materials land in your inventory sheet.</li>
-          <li>Click a fishing spot, the jester, a cow, or a placed villager to inspect. Named villagers can talk back, and some keep a shop — you start with 100 coins.</li>
-          <li>Enter opens chat and reaches everyone in the world. Names float above bodies as you pass.</li>
-          <li>Hold Shift to sprint the trails. Fresh ground trains Stride; the dust follows your boots.</li>
-        </ul>
-        <div class="note reveal">
-          <strong>Why you cannot walk through a tree:</strong> online play is checked by the world server, so the world always knows where you really stand. Single player runs the same shared rules locally.
+        <div class="duo">
+          <article class="card reveal">
+            <h3>Harvest</h3>
+            <ul class="ticks">
+              <li><strong>Trees</strong> — click a young oak to chop. The axe swings once a second, bark chips fly, and XP floats up over your head. Pine opens at 10, elderwood at 80.</li>
+              <li><strong>Rocks</strong> — click to mine. Copper at level 1, diamond at 90, twenty kinds between. Rocks never run out.</li>
+              <li><strong>Sand and clay</strong> — click to dig; the spade swings, soil puffs, and the materials land in your inventory.</li>
+              <li><strong>Fishing spots</strong> — walk up, click, stand still. A few seconds later you have a minnow, a trout, or at 80 a mooncale. Step away and the cast is lost.</li>
+            </ul>
+          </article>
+          <article class="card reveal" style="--d:.1s">
+            <h3>Talk</h3>
+            <ul class="ticks">
+              <li><strong>Enter</strong> opens chat and reaches everyone in your world. Names float above bodies as you pass.</li>
+              <li><strong>Villagers</strong> — click the Historian, a jester, a cow. Named ones talk back with their own lines.</li>
+              <li><strong>Shops</strong> — Bartholomew Goldthread trades sand and clay. You start with 100 coins.</li>
+              <li><strong>Signs</strong> — the gate sign welcomes you to Ottertown. Click it; it has more to say.</li>
+            </ul>
+            <div class="callout"><strong>Why you cannot walk through a tree:</strong> online, every step is checked by the world server, so the world always knows where you really stand. Single player runs the same shared rules locally.</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec tight">
+      <div class="shell">
+        <div class="sec-head reveal">
+          <div class="eyebrow">First ten minutes</div>
+          <h2 class="sec-title">A route out of the <em>wood</em>.</h2>
+        </div>
+        <div class="timeline">
+          <article class="tl reveal"><div class="when">Minute 0</div><h3>The clearing</h3><p>A cold campfire, four young oaks, one faint track. Click an oak. That is your first 25 Woodcutting XP and your first log.</p></article>
+          <article class="tl reveal" style="--d:.06s"><div class="when">Minute 2</div><h3>Hold Shift</h3><p>Follow the track out. Every fresh cell under your boots pays +4 Stride. The dust follows you; the warm trail behind you pays breath back instead.</p></article>
+          <article class="tl reveal" style="--d:.12s"><div class="when">Minute 5</div><h3>The square</h3><p>Decked boards, a ring road, four gates. Press <kbd>M</kbd> once to see how far the world goes. Press <kbd>Enter</kbd> and say hello — someone is usually there.</p></article>
+          <article class="tl reveal" style="--d:.18s"><div class="when">Minute 8</div><h3>Pick a direction</h3><p>South-west for the lake and its piers. South-east for the quarry and copper. North-east for the birch grove and the pond. Press <kbd>P</kbd> whenever you want to see the ladders move.</p></article>
         </div>
       </div>
     </section>
@@ -121,16 +151,16 @@
     <section class="sec" id="download">
       <div class="shell">
         <div class="cta reveal">
-          <div class="fireflies" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
-          <div class="eyebrow">Ready</div>
-          <h2>Pick a name. Wake up in Deepwood.</h2>
+          <div class="fireflies" aria-hidden="true"><i style="--x:10%;--y:40%;--t:9s"></i><i style="--x:25%;--y:75%;--t:11s;--d:-3s;--dx:-40px"></i><i style="--x:50%;--y:15%;--t:8s;--d:-5s"></i><i style="--x:70%;--y:65%;--t:12s;--d:-1s;--dx:50px;--dy:-20px"></i><i style="--x:88%;--y:30%;--t:10s;--d:-7s"></i></div>
+          <div class="eyebrow" style="justify-content:center">Ready</div>
+          <h2>Pick a name. Wake up in <em>Deepwood</em>.</h2>
           <p>Your character is saved with every visit — leave today, come back next week, and the meadow remembers.</p>
           <div class="actions center">
-            <a class="btn gold" href="https://www.dropbox.com/scl/fi/5wnbg2ie49hfur2c7x07w/GreenhavenSetup.exe?rlkey=voe5gilo3is6j5h95es1tyhab&amp;st=x2enkdfn&amp;dl=0">Download for Windows</a>
-            <a class="btn gold" href="https://www.dropbox.com/scl/fi/879lr5t2764r40r1vs7pr/Greenhaven-linux-20260917.tar.gz?rlkey=p2utkld8kdhymnxmqbs8xuqi9&amp;st=f24wg89z&amp;dl=1">Download for Linux</a>
-            <a class="btn ghost-dark" href="world.html">See the world</a>
+            <a class="btn gold" href="https://www.dropbox.com/scl/fi/5wnbg2ie49hfur2c7x07w/GreenhavenSetup.exe?rlkey=voe5gilo3is6j5h95es1tyhab&amp;st=x2enkdfn&amp;dl=1">Download for Windows</a>
+            <a class="btn moss" href="https://www.dropbox.com/scl/fi/879lr5t2764r40r1vs7pr/Greenhaven-linux-20260917.tar.gz?rlkey=p2utkld8kdhymnxmqbs8xuqi9&amp;st=f24wg89z&amp;dl=1">Download for Linux</a>
+            <a class="btn ghost" href="world.html">See the world</a>
           </div>
-          <p class="micro">Windows &amp; Linux clients available now &middot; v0.1.7 Early Development</p>
+          <p class="micro">v0.1.10 · EARLY DEVELOPMENT · WINDOWS &amp; LINUX</p>
         </div>
       </div>
     </section>
@@ -139,20 +169,27 @@
   <footer class="site">
     <div class="shell foot">
       <div class="f-brand">
-        <img class="yak" src="assets/happy-yak.png" alt="Happy Yak Productions mascot — a highland yak with a green travel pack">
+        <img class="yak" src="assets/happy-yak.png" alt="">
         <div>
           <strong>GREENHAVEN</strong>
-          <span>A Happy Yak Productions game<br>Otterdays — Main &amp; Lead Developer</span>
+          <span>A Happy Yak Productions game<br>Otterdays — main &amp; lead developer</span>
         </div>
       </div>
-      <nav class="f-links">
+      <div class="f-col">
+        <h4>Site</h4>
         <a href="play.html">How to play</a>
         <a href="world.html">The world</a>
-        <a href="#download">Download</a>
-      </nav>
+        <a href="index.html#skills">Skill ladders</a>
+        <a href="index.html#download">Download</a>
+      </div>
+      <div class="f-col">
+        <h4>Elsewhere</h4>
+        <a href="https://github.com/Otterdays/Greenhaven">This site on GitHub</a>
+        <a href="https://github.com/Otterdays/greenhaven-server">Server releases</a>
+      </div>
       <div class="f-meta">
         <span>&copy; <span id="year">2026</span> Happy Yak Productions</span>
-        <span>Rust world server &middot; Bevy client &middot; SQLite saves</span>
+        <span><code>rust</code> world server · <code>bevy 0.19</code> client · <code>postgres</code> saves · <code>v0.1.10</code></span>
       </div>
     </div>
   </footer>

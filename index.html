@@ -1,24 +1,27 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Greenhaven — a native 2D MMORPG</title>
-  <meta name="description" content="Greenhaven is a native 2D MMORPG. Chop, mine, dig and sprint one shared meadow — a Rust world server, a Bevy client, and a character that stays.">
-  <meta name="theme-color" content="#f8f4e9">
+  <meta name="description" content="Greenhaven is a native 2D MMORPG. Chop, mine, fish and sprint one shared meadow — a Rust world server, a Bevy client, three worlds, and a character that stays.">
+  <meta name="theme-color" content="#0c1510">
   <meta property="og:title" content="Greenhaven — a native 2D MMORPG">
-  <meta property="og:description" content="One shared meadow, real skill ladders, and a character that is still there tomorrow.">
+  <meta property="og:description" content="One shared meadow, four skill ladders to 99, and a character that is still there tomorrow.">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="assets/happy-yak.png">
+  <meta property="og:url" content="https://otterdays.github.io/Greenhaven/">
+  <meta property="og:image" content="https://otterdays.github.io/Greenhaven/assets/happy-yak.png">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-  <script>document.documentElement.classList.add('js')</script>
+  <link rel="preload" as="image" href="assets/gameplay.gif">
+  <script>document.documentElement.classList.replace('no-js','js')</script>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header class="site" id="header">
     <div class="shell">
       <a class="brand" href="index.html">
-        <span class="mark" aria-hidden="true"><svg viewBox="0 0 64 64" fill="none"><circle cx="32" cy="32" r="10" fill="#d9a544"/><g stroke="#d9a544" stroke-width="5" stroke-linecap="round"><path d="M32 8v7M32 49v7M8 32h7M49 32h7"/><path d="M15 15l5 5M44 44l5 5M49 15l-5 5M20 44l-5 5"/></g></svg></span>
+        <span class="mark" aria-hidden="true"><svg viewBox="0 0 64 64" fill="none"><circle cx="32" cy="32" r="10" fill="#e5b551"/><g stroke="#e5b551" stroke-width="5" stroke-linecap="round"><path d="M32 8v7M32 49v7M8 32h7M49 32h7"/><path d="M15 15l5 5M44 44l5 5M49 15l-5 5M20 44l-5 5"/></g></svg></span>
         GREENHAVEN <small>2D MMORPG</small>
       </a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
@@ -26,199 +29,400 @@
         <a href="index.html" aria-current="page">Home</a>
         <a href="play.html">How to play</a>
         <a href="world.html">The world</a>
-        <a class="btn primary sm" href="#download">Download</a>
+        <a href="#skills">Skills</a>
+        <a class="btn gold sm" href="#download">Download</a>
       </nav>
     </div>
   </header>
 
   <div class="announce" role="status">
     <span class="dot" aria-hidden="true"></span>
-    <span>Now available on <strong>Windows</strong> &amp; <strong>Linux</strong></span>
-    <span class="badge">v0.1.7</span>
+    <span><strong>v0.1.10</strong> is here — one PLAY button, three worlds, fishing, and a hello from the dev</span>
+    <span class="badge">EARLY DEV</span>
   </div>
 
-  <section class="hero">
-    <div class="shell">
-      <div>
-        <div class="eyebrow">A Happy Yak Productions game</div>
-        <h1>A meadow.<br>Then a <em>world</em>.</h1>
-        <p class="lede">Greenhaven is a native 2D MMORPG you run on your own machine. One shared meadow, three skill ladders under your feet, and a character that is still there tomorrow.</p>
-        <div class="actions">
-          <a class="btn primary" href="https://www.dropbox.com/scl/fi/5wnbg2ie49hfur2c7x07w/GreenhavenSetup.exe?rlkey=voe5gilo3is6j5h95es1tyhab&amp;st=x2enkdfn&amp;dl=0">Download for Windows</a>
-          <a class="btn primary" href="https://www.dropbox.com/scl/fi/879lr5t2764r40r1vs7pr/Greenhaven-linux-20260917.tar.gz?rlkey=p2utkld8kdhymnxmqbs8xuqi9&amp;st=f24wg89z&amp;dl=1">Download for Linux</a>
-          <a class="btn ghost" href="play.html">How to play</a>
+  <main>
+    <section class="hero">
+      <div class="stars" aria-hidden="true" id="stars"></div>
+      <div class="moon" aria-hidden="true"></div>
+      <div class="shell">
+        <div>
+          <div class="eyebrow">A Happy Yak Productions game</div>
+          <h1 class="h-display">A meadow.<br>Then a <em>world</em>.<br><span class="under">Then you.</span></h1>
+          <p class="lede">Greenhaven is a native 2D MMORPG you run on your own machine. One shared meadow, four skill ladders under your feet, three worlds on one account — and a character that is still there tomorrow.</p>
+          <div class="actions">
+            <a class="btn gold" href="https://www.dropbox.com/scl/fi/5wnbg2ie49hfur2c7x07w/GreenhavenSetup.exe?rlkey=voe5gilo3is6j5h95es1tyhab&amp;st=x2enkdfn&amp;dl=1">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 5.5 10.5 4.4v7.1H3zm0 13 7.5 1.1v-7.1H3zm8.5 1.3L21 21v-8.5h-9.5zM11.5 4.2 21 3v8.5h-9.5z"/></svg>
+              Windows <span class="sub">installer</span>
+            </a>
+            <a class="btn moss" href="https://www.dropbox.com/scl/fi/879lr5t2764r40r1vs7pr/Greenhaven-linux-20260917.tar.gz?rlkey=p2utkld8kdhymnxmqbs8xuqi9&amp;st=f24wg89z&amp;dl=1">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2c-2.5 0-4 2-4 4.5 0 1.3.3 2.2.1 3.2-.4 1.6-2.6 3.3-2.6 6 0 .6.1 1.2.3 1.7-.9.3-1.8.8-1.8 1.6 0 1 1.5 1.5 2.9 1.8.6 1 2.3 1.2 3.6.2.5.1 1 .1 1.5.1s1 0 1.5-.1c1.3 1 3 .8 3.6-.2 1.4-.3 2.9-.8 2.9-1.8 0-.8-.9-1.3-1.8-1.6.2-.5.3-1.1.3-1.7 0-2.7-2.2-4.4-2.6-6-.2-1 .1-1.9.1-3.2C16 4 14.5 2 12 2zm-1.5 4a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm3 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2zM12 9c1.2 0 2.5.6 2.5 1.2S13.2 11.5 12 11.5 9.5 10.8 9.5 10.2 10.8 9 12 9z"/></svg>
+              Linux <span class="sub">tar.gz</span>
+            </a>
+            <a class="btn ghost" href="play.html">How to play</a>
+          </div>
+          <p class="platforms"><span>Native Rust + Bevy</span><span>No browser, no launcher</span><span>Saves every visit</span><span>Free</span></p>
         </div>
-        <p class="platforms"><span>Windows &amp; Linux clients</span><span>Native Rust + Bevy</span><span>Saves every visit</span></p>
-        <div class="version-badge"><span class="dot" aria-hidden="true"></span><strong>v0.1.7</strong> Early Development</div>
-      </div>
-      <div class="stage">
-        <div class="window">
-          <div class="bar" aria-hidden="true"><i></i><i></i><i></i><span class="title">greenhaven — deepwood</span></div>
-          <img src="assets/gameplay.gif" width="480" height="300" alt="Greenhaven gameplay — a character walking the meadow">
-        </div>
-        <span class="chip xp" aria-hidden="true"><b>+25</b> woodcutting</span>
-        <span class="chip stride" aria-hidden="true"><b>+4</b> stride</span>
-      </div>
-    </div>
-  </section>
-
-  <div class="ticker" aria-hidden="true">
-    <div class="ticker-track">
-      <div class="ticker-group">
-        <span>Woodcutting</span><i>✦</i><span>Mining</span><i>✦</i><span>Digging</span><i>✦</i><span>Stride</span><i>✦</i><span>First person</span><i>✦</i><span>World map</span><i>✦</i><span>Live chat</span><i>✦</i><span>Saved characters</span><i>✦</i><span>One shared meadow</span><i>✦</i>
-      </div>
-      <div class="ticker-group">
-        <span>Woodcutting</span><i>✦</i><span>Mining</span><i>✦</i><span>Digging</span><i>✦</i><span>Stride</span><i>✦</i><span>First person</span><i>✦</i><span>World map</span><i>✦</i><span>Live chat</span><i>✦</i><span>Saved characters</span><i>✦</i><span>One shared meadow</span><i>✦</i>
-      </div>
-    </div>
-  </div>
-
-  <section class="sec">
-    <div class="shell">
-      <div class="sec-head reveal">
-        <div class="eyebrow">What you can do</div>
-        <h2 class="sec-title">Small verbs. A real world.</h2>
-        <p class="sec-sub">You wake in the wood, walk out along one faint track, and the meadow is already busy being a place — with other players in it, or without.</p>
-      </div>
-      <div class="grid-3">
-        <article class="card reveal">
-          <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M16.2 7.8l-2.1 6.3-6.3 2.1 2.1-6.3z"/></svg></span>
-          <h3>The world decides</h3>
-          <p>You send where you want to go; the world server decides where you stand. No slipping through a tree on the diagonal.</p>
-        </article>
-        <article class="card reveal" style="--d:.08s">
-          <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg></span>
-          <h3>Characters that stay</h3>
-          <p>Your name, place, skills and coins are saved with every visit. The meadow does not forget you between sessions.</p>
-        </article>
-        <article class="card reveal" style="--d:.16s">
-          <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 7 11h3l-4 6h12l-4-6h3z"/><path d="M12 17v4"/></svg></span>
-          <h3>Chop, mine, dig</h3>
-          <p>Swing at a young oak once a second, mine copper at level 1 and diamond at 90, and dig sand and clay out of the ground.</p>
-        </article>
-        <article class="card reveal">
-          <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9h9a3 3 0 1 0-3-3"/><path d="M4 14h13a3 3 0 1 1-3 3"/></svg></span>
-          <h3>Sprint the trails</h3>
-          <p>Hold Shift to run at double speed. Fresh ground under your feet trains Stride — loops around one tile pay nothing.</p>
-        </article>
-        <article class="card reveal" style="--d:.08s">
-          <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg></span>
-          <h3>Talk to the meadow</h3>
-          <p>Enter opens chat and reaches everyone in the world. Villagers can talk back, and some keep shops — you start with 100 coins.</p>
-        </article>
-        <article class="card reveal" style="--d:.16s">
-          <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg></span>
-          <h3>Look closer</h3>
-          <p>Press F5 to stand inside your character's eyes, M for the full world map, P for your skills sheet. F1 shows every key.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="sec dark">
-    <div class="fireflies" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
-    <div class="shell">
-      <div class="sec-head reveal">
-        <div class="eyebrow">Skill ladders</div>
-        <h2 class="sec-title">Train while you wander.</h2>
-        <p class="sec-sub">Every skill climbs to 99 and every point of XP is saved. Pick a habit and the meadow pays you back.</p>
-      </div>
-      <div class="skill-grid">
-        <article class="skill reveal">
-          <span class="lvl">Level 1 - 99</span>
-          <h3>Woodcutting</h3>
-          <p>Nine tree kinds, one every ten levels — from the young oak by your first campfire to the elderwood at 80.</p>
-          <div class="bar" aria-hidden="true"><i data-fill="78"></i></div>
-          <div class="xp"><span>+25 to +285 per chop</span><span>nine trees</span></div>
-        </article>
-        <article class="skill reveal" style="--d:.1s">
-          <span class="lvl">Level 1 - 99</span>
-          <h3>Mining</h3>
-          <p>Twelve rock kinds from copper at level 1 to diamond at 90. One mine per second, and the rocks never run out.</p>
-          <div class="bar" aria-hidden="true"><i data-fill="62"></i></div>
-          <div class="xp"><span>copper to diamond</span><span>twelve rocks</span></div>
-        </article>
-        <article class="skill reveal" style="--d:.2s">
-          <span class="lvl">Level 1 - 99</span>
-          <h3>Stride</h3>
-          <p>Hold Shift to sprint at 2x walk speed. A fresh cell pays +4 Stride XP; warm ground pays breath back, not XP.</p>
-          <div class="bar" aria-hidden="true"><i data-fill="45"></i></div>
-          <div class="xp"><span>+4 per fresh cell</span><span>2.5s warm trail</span></div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="sec">
-    <div class="shell">
-      <div class="stats reveal">
-        <div class="stat"><b><span class="count" data-to="250">0</span><i>&times;250</i></b><span>tiles of hand-built world</span></div>
-        <div class="stat"><b class="count" data-to="99">0</b><span>levels on every skill</span></div>
-        <div class="stat"><b class="count" data-to="9">0</b><span>cuttable tree kinds</span></div>
-        <div class="stat"><b class="count" data-to="12">0</b><span>mineable rock kinds</span></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="sec">
-    <div class="shell split">
-      <div class="reveal">
-        <div class="eyebrow">The world</div>
-        <h2 class="sec-title">Waking up in Deepwood.</h2>
-        <p class="sec-sub">You open your eyes in a hidden clearing: a cold campfire, four young oaks, one faint track out. Beyond it waits a 250&times;250 world — a decked village square, a ring road, three timber bridges over the river, a lake with piers, an orchard, a stone circle and a quarry full of ore.</p>
-        <div class="actions">
-          <a class="btn ghost" href="world.html">Explore the world</a>
+        <div class="stage" id="stage">
+          <div class="window">
+            <div class="bar" aria-hidden="true"><i></i><i></i><i></i><span class="title">greenhaven — world_1 — deepwood</span></div>
+            <img src="assets/gameplay.gif" width="480" height="300" alt="Greenhaven gameplay — a character walking out of Deepwood into the meadow">
+            <div class="scan" aria-hidden="true"></div>
+          </div>
+          <span class="chip xp" aria-hidden="true"><b>+25</b> Woodcutting</span>
+          <span class="chip stride" aria-hidden="true"><b>+4</b> Stride</span>
+          <span class="chip fish" aria-hidden="true"><b>+20</b> Fishing · minnow</span>
         </div>
       </div>
-      <div class="mosaic-figure reveal" style="--d:.12s" aria-hidden="true">
-        <div class="tiles">
-          <i class="fo"></i><i class="fo"></i><i class="fo"></i><i class="fo"></i><i></i><i></i><i class="fo"></i><i class="fo"></i><i class="fo"></i>
-          <i class="fo"></i><i class="fo"></i><i></i><i></i><i></i><i class="t2"></i><i></i><i class="fo"></i><i class="fo"></i>
-          <i></i><i></i><i class="t2"></i><i class="tr"></i><i class="tr"></i><i></i><i></i><i></i><i></i>
-          <i></i><i class="wat"></i><i class="wat"></i><i class="wat"></i><i class="ti"></i><i class="wat"></i><i class="wat"></i><i></i><i class="st"></i>
-          <i></i><i class="wat"></i><i class="wat"></i><i class="wat"></i><i class="wat"></i><i class="wat"></i><i></i><i class="st"></i><i class="st"></i>
-          <i></i><i></i><i class="tr"></i><i class="tr"></i><i></i><i></i><i></i><i class="st"></i><i></i>
-          <i></i><i class="fire"></i><i></i><i></i><i></i><i class="tr"></i><i class="tr"></i><i></i><i></i>
-        </div>
-        <span class="walker"></span>
-      </div>
-    </div>
-  </section>
+      <svg class="hills" viewBox="0 0 1440 220" preserveAspectRatio="none" aria-hidden="true">
+        <path data-depth="6" fill="#132119" d="M0 150C200 100 350 130 520 110s300-60 480-40 300 60 440 30v70H0z"/>
+        <path data-depth="14" fill="#182b1e" d="M0 190c180-40 340-50 520-30s340-30 500-10 280 40 420 20v50H0z"/>
+        <path data-depth="24" fill="#1c3323" d="M0 220v-30c220-30 380-10 560 5s320-25 480-5 260 30 400 20v10z"/>
+      </svg>
+    </section>
 
-  <section class="sec" id="download">
-    <div class="shell">
-      <div class="cta reveal">
-        <div class="fireflies" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
-        <div class="eyebrow">Play now</div>
-        <h2>The meadow is open.</h2>
-        <p>Download the native client, pick a name, and wake up in Deepwood. Windows and Linux today.</p>
-        <div class="actions center">
-          <a class="btn gold" href="https://www.dropbox.com/scl/fi/5wnbg2ie49hfur2c7x07w/GreenhavenSetup.exe?rlkey=voe5gilo3is6j5h95es1tyhab&amp;st=x2enkdfn&amp;dl=0">Download for Windows</a>
-          <a class="btn gold" href="https://www.dropbox.com/scl/fi/879lr5t2764r40r1vs7pr/Greenhaven-linux-20260917.tar.gz?rlkey=p2utkld8kdhymnxmqbs8xuqi9&amp;st=f24wg89z&amp;dl=1">Download for Linux</a>
-          <a class="btn ghost-dark" href="play.html">How to play</a>
-        </div>
-        <p class="micro">Windows &amp; Linux clients available now &middot; v0.1.7 Early Development</p>
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker-track">
+        <div class="ticker-group"><span>Woodcutting</span><i>✦</i><span>Mining</span><i>✦</i><span>Fishing</span><i>✦</i><span>Stride</span><i>✦</i><span>Digging</span><i>✦</i><span>Three worlds</span><i>✦</i><span>First person</span><i>✦</i><span>World map</span><i>✦</i><span>Live chat</span><i>✦</i><span>Shops</span><i>✦</i><span>Saved characters</span><i>✦</i><span>One shared meadow</span><i>✦</i></div>
+        <div class="ticker-group"><span>Woodcutting</span><i>✦</i><span>Mining</span><i>✦</i><span>Fishing</span><i>✦</i><span>Stride</span><i>✦</i><span>Digging</span><i>✦</i><span>Three worlds</span><i>✦</i><span>First person</span><i>✦</i><span>World map</span><i>✦</i><span>Live chat</span><i>✦</i><span>Shops</span><i>✦</i><span>Saved characters</span><i>✦</i><span>One shared meadow</span><i>✦</i></div>
       </div>
     </div>
-  </section>
+
+    <!-- ============ what you do ============ -->
+    <section class="sec">
+      <div class="shell">
+        <div class="sec-head reveal">
+          <div class="eyebrow">What you can do</div>
+          <h2 class="sec-title">Small verbs. A <em>real</em> world.</h2>
+          <p class="sec-sub">You wake in Deepwood, walk out along one faint track, and Ottertown is already busy being a place — with other players in it, or without.</p>
+        </div>
+        <div class="bento">
+          <article class="tile w4 feature reveal">
+            <div>
+              <span class="icon gold" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg></span>
+              <h3>Talk to the meadow</h3>
+              <p>Enter opens chat and reaches everyone in your world. Villagers talk back, and some keep shops — you start with 100 coins and a merchant who deals in sand and clay.</p>
+            </div>
+            <div class="chatlog" aria-hidden="true">
+              <div class="l"><b>Fern:</b> anyone by the quarry?</div>
+              <div class="l npc"><b>Bartholomew Goldthread:</b> Everything is for sale. Even this conversation.</div>
+              <div class="l"><b>Moss:</b> just hit 30 mining, gold rocks open</div>
+              <div class="l sys">You caught a minnow. +20 Fishing.</div>
+            </div>
+          </article>
+          <article class="tile w2 reveal" style="--d:.08s">
+            <span class="tag">Server-authoritative</span>
+            <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M16.2 7.8l-2.1 6.3-6.3 2.1 2.1-6.3z"/></svg></span>
+            <h3>The world decides</h3>
+            <p>You send where you want to go; the world server decides where you stand. No slipping through a tree on the diagonal, no rubber-banding into the river.</p>
+          </article>
+          <article class="tile w2 reveal">
+            <span class="icon teal" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg></span>
+            <h3>Characters that stay</h3>
+            <p>Name, place, skills, coins and inventory are saved with every visit. One account, three worlds. The meadow does not forget you.</p>
+          </article>
+          <article class="tile w2 reveal" style="--d:.08s">
+            <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 7 11h3l-4 6h12l-4-6h3z"/><path d="M12 17v4"/></svg></span>
+            <h3>Chop, mine, dig, fish</h3>
+            <p>Nine trees, twenty rocks, six fish, and sand and clay in the ground. Every harvest is checked by the world and every point of XP is kept.</p>
+          </article>
+          <article class="tile w2 reveal" style="--d:.16s">
+            <span class="icon gold" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9h9a3 3 0 1 0-3-3"/><path d="M4 14h13a3 3 0 1 1-3 3"/></svg></span>
+            <h3>Sprint the trails</h3>
+            <p>Hold Shift to run at double speed. Fresh ground under your feet trains Stride — loops around one tile pay nothing. The dust follows your boots.</p>
+          </article>
+          <article class="tile w3 reveal">
+            <span class="icon teal" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg></span>
+            <h3>Look closer</h3>
+            <p><kbd>F5</kbd> stands you inside your character's eyes, <kbd>M</kbd> unrolls the full world map, <kbd>P</kbd> opens your skills sheet. <kbd>F1</kbd> lists every key.</p>
+          </article>
+          <article class="tile w3 reveal" style="--d:.08s">
+            <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 21h8M12 18v3"/></svg></span>
+            <h3>Runs on your machine</h3>
+            <p>A native window, not a browser tab. Rust world server, Bevy client, PostgreSQL saves. Windows and Linux today; no account needed to wander Single player.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ skills ============ -->
+    <section class="sec band" id="skills">
+      <div class="fireflies" aria-hidden="true"><i style="--x:8%;--y:30%;--t:9s"></i><i style="--x:30%;--y:70%;--t:11s;--d:-3s;--dx:-40px"></i><i style="--x:55%;--y:20%;--t:8s;--d:-5s"></i><i style="--x:80%;--y:60%;--t:12s;--d:-1s;--dx:50px;--dy:-20px"></i><i style="--x:92%;--y:35%;--t:10s;--d:-7s"></i></div>
+      <div class="shell">
+        <div class="sec-head reveal">
+          <div class="eyebrow">Skill ladders</div>
+          <h2 class="sec-title">Train while you <em>wander</em>.</h2>
+          <p class="sec-sub">Four skills climb to 99 and every point of XP is saved. Pick a habit and the meadow pays you back. The numbers below are the real ones from the shared rules crate.</p>
+        </div>
+        <div class="skills">
+          <article class="skill wood reveal" style="--fill:78%">
+            <span class="lvl">Level 1 – 99</span>
+            <h3>Woodcutting</h3>
+            <p>Nine tree kinds, roughly one every ten levels — from the young oak by your first campfire to the elderwood at 80.</p>
+            <div class="bar" aria-hidden="true"><i></i></div>
+            <div class="xp"><span>+25 → +285 / chop</span><span>9 trees</span></div>
+          </article>
+          <article class="skill mine reveal" style="--fill:62%;--d:.08s">
+            <span class="lvl">Level 1 – 99</span>
+            <h3>Mining</h3>
+            <p>Twenty rock kinds from plain stone at level 1 to diamond at 90. Ores, gems, mithril, orichalcum. The rocks never run out.</p>
+            <div class="bar" aria-hidden="true"><i></i></div>
+            <div class="xp"><span>+20 → +340 / mine</span><span>20 rocks</span></div>
+          </article>
+          <article class="skill fish reveal" style="--fill:50%;--d:.16s">
+            <span class="lvl">Level 1 – 99</span>
+            <h3>Fishing</h3>
+            <p>Six tiers from the minnow at level 1 to the mooncale at 80. Stand still at a spot, cast, and a few seconds later something pulls back.</p>
+            <div class="bar" aria-hidden="true"><i></i></div>
+            <div class="xp"><span>+20 → +270 / catch</span><span>6 fish</span></div>
+          </article>
+          <article class="skill stride reveal" style="--fill:45%;--d:.24s">
+            <span class="lvl">Level 1 – 99</span>
+            <h3>Stride</h3>
+            <p>Hold Shift to sprint at 2× walk speed. A fresh cell pays +4 Stride XP; warm ground pays breath back, not XP.</p>
+            <div class="bar" aria-hidden="true"><i></i></div>
+            <div class="xp"><span>+4 / fresh cell</span><span>2.5 s warm trail</span></div>
+          </article>
+        </div>
+
+        <div class="reveal">
+          <div class="tabs" role="tablist" aria-label="Skill ladders">
+            <button role="tab" aria-selected="true" aria-controls="lad-wood" id="tab-wood">Trees</button>
+            <button role="tab" aria-selected="false" aria-controls="lad-mine" id="tab-mine">Rocks</button>
+            <button role="tab" aria-selected="false" aria-controls="lad-fish" id="tab-fish">Fish</button>
+          </div>
+          <div class="ladder on" id="lad-wood" role="tabpanel" aria-labelledby="tab-wood">
+            <div class="ladder-wrap"><table>
+              <thead><tr><th>Tree</th><th>Level</th><th>XP per chop</th><th>Log</th></tr></thead>
+              <tbody>
+                <tr><td>Young oak</td><td class="lv">1</td><td><span class="meter" style="--w:9%"><i></i></span><span class="xpv">25</span></td><td>Young oak log</td></tr>
+                <tr><td>Pine</td><td class="lv">10</td><td><span class="meter" style="--w:14%"><i></i></span><span class="xpv">40</span></td><td>Pine log</td></tr>
+                <tr><td>Ancient oak</td><td class="lv">30</td><td><span class="meter" style="--w:30%"><i></i></span><span class="xpv">85</span></td><td>Ancient oak log</td></tr>
+                <tr><td>Willow</td><td class="lv">50</td><td><span class="meter" style="--w:53%"><i></i></span><span class="xpv">150</span></td><td>Willow log</td></tr>
+                <tr><td>Redwood</td><td class="lv">60</td><td><span class="meter" style="--w:67%"><i></i></span><span class="xpv">190</span></td><td>Redwood log</td></tr>
+                <tr><td>Silverwood</td><td class="lv">70</td><td><span class="meter" style="--w:82%"><i></i></span><span class="xpv">235</span></td><td>Silverwood log</td></tr>
+                <tr><td>Elderwood</td><td class="lv">80</td><td><span class="meter" style="--w:100%"><i></i></span><span class="xpv">285</span></td><td>Elderwood log</td></tr>
+              </tbody>
+            </table></div>
+            <div class="note">Seven of the nine cuttable kinds shown. English oak and white birch are scenery — they shade the road and refuse the axe.</div>
+          </div>
+          <div class="ladder" id="lad-mine" role="tabpanel" aria-labelledby="tab-mine" hidden>
+            <div class="ladder-wrap"><table>
+              <thead><tr><th>Rock</th><th>Level</th><th>XP per mine</th><th>Yield</th></tr></thead>
+              <tbody>
+                <tr><td>Copper rock</td><td class="lv">1</td><td><span class="meter" style="--w:9%"><i></i></span><span class="xpv">30</span></td><td>Copper ore</td></tr>
+                <tr><td>Tin rock</td><td class="lv">5</td><td><span class="meter" style="--w:10%"><i></i></span><span class="xpv">35</span></td><td>Tin ore</td></tr>
+                <tr><td>Iron rock</td><td class="lv">10</td><td><span class="meter" style="--w:13%"><i></i></span><span class="xpv">45</span></td><td>Iron ore</td></tr>
+                <tr><td>Coal rock</td><td class="lv">20</td><td><span class="meter" style="--w:18%"><i></i></span><span class="xpv">60</span></td><td>Coal</td></tr>
+                <tr><td>Silver rock</td><td class="lv">25</td><td><span class="meter" style="--w:21%"><i></i></span><span class="xpv">72</span></td><td>Silver ore</td></tr>
+                <tr><td>Gold rock</td><td class="lv">30</td><td><span class="meter" style="--w:25%"><i></i></span><span class="xpv">85</span></td><td>Gold ore</td></tr>
+                <tr><td>Ruby rock</td><td class="lv">40</td><td><span class="meter" style="--w:34%"><i></i></span><span class="xpv">115</span></td><td>Ruby</td></tr>
+                <tr><td>Mithril rock</td><td class="lv">45</td><td><span class="meter" style="--w:39%"><i></i></span><span class="xpv">132</span></td><td>Mithril ore</td></tr>
+                <tr><td>Emerald rock</td><td class="lv">50</td><td><span class="meter" style="--w:44%"><i></i></span><span class="xpv">150</span></td><td>Emerald</td></tr>
+                <tr><td>Topaz rock</td><td class="lv">55</td><td><span class="meter" style="--w:49%"><i></i></span><span class="xpv">168</span></td><td>Topaz</td></tr>
+                <tr><td>Sapphire rock</td><td class="lv">60</td><td><span class="meter" style="--w:56%"><i></i></span><span class="xpv">190</span></td><td>Sapphire</td></tr>
+                <tr><td>Adamantite rock</td><td class="lv">65</td><td><span class="meter" style="--w:62%"><i></i></span><span class="xpv">210</span></td><td>Adamantite ore</td></tr>
+                <tr><td>Amethyst rock</td><td class="lv">70</td><td><span class="meter" style="--w:69%"><i></i></span><span class="xpv">235</span></td><td>Amethyst</td></tr>
+                <tr><td>Orichalcum rock</td><td class="lv">75</td><td><span class="meter" style="--w:76%"><i></i></span><span class="xpv">260</span></td><td>Orichalcum ore</td></tr>
+                <tr><td>Onyx rock</td><td class="lv">80</td><td><span class="meter" style="--w:84%"><i></i></span><span class="xpv">285</span></td><td>Onyx</td></tr>
+                <tr><td>Opal rock</td><td class="lv">85</td><td><span class="meter" style="--w:91%"><i></i></span><span class="xpv">310</span></td><td>Opal</td></tr>
+                <tr><td>Diamond rock</td><td class="lv">90</td><td><span class="meter" style="--w:100%"><i></i></span><span class="xpv">340</span></td><td>Diamond</td></tr>
+              </tbody>
+            </table></div>
+            <div class="note">Plus plain rock, granite boulders and rock clusters at level 1 for stone. Twenty kinds in all. One swing a second, and nothing ever runs dry.</div>
+          </div>
+          <div class="ladder" id="lad-fish" role="tabpanel" aria-labelledby="tab-fish" hidden>
+            <div class="ladder-wrap"><table>
+              <thead><tr><th>Fish</th><th>Level</th><th>XP per catch</th><th>Cast time</th></tr></thead>
+              <tbody>
+                <tr><td>Minnow</td><td class="lv">1</td><td><span class="meter" style="--w:7%"><i></i></span><span class="xpv">20</span></td><td>2.5 s</td></tr>
+                <tr><td>Silverfin</td><td class="lv">15</td><td><span class="meter" style="--w:17%"><i></i></span><span class="xpv">45</span></td><td>3.0 s</td></tr>
+                <tr><td>Trout</td><td class="lv">30</td><td><span class="meter" style="--w:30%"><i></i></span><span class="xpv">80</span></td><td>3.5 s</td></tr>
+                <tr><td>Salmon</td><td class="lv">45</td><td><span class="meter" style="--w:48%"><i></i></span><span class="xpv">130</span></td><td>4.0 s</td></tr>
+                <tr><td>Lanternfish</td><td class="lv">60</td><td><span class="meter" style="--w:70%"><i></i></span><span class="xpv">190</span></td><td>4.5 s</td></tr>
+                <tr><td>Mooncale</td><td class="lv">80</td><td><span class="meter" style="--w:100%"><i></i></span><span class="xpv">270</span></td><td>5.0 s</td></tr>
+              </tbody>
+            </table></div>
+            <div class="note">Every fishing spot is one tier. Walk up, click, stand still — move and the cast is lost. Same values online and in Single player.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ stats ============ -->
+    <section class="sec tight">
+      <div class="shell">
+        <div class="stats reveal">
+          <div class="stat"><b><span class="count" data-to="250">0</span><i>×250</i></b><span>tiles of hand-painted world</span></div>
+          <div class="stat"><b><span class="count" data-to="4">0</span><i>× 99</i></b><span>skill ladders, every level saved</span></div>
+          <div class="stat"><b class="count" data-to="20">0</b><span>mineable rock kinds</span></div>
+          <div class="stat"><b class="count" data-to="3">0</b><span>worlds on one account</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ worlds ============ -->
+    <section class="sec">
+      <div class="shell">
+        <div class="sec-head reveal">
+          <div class="eyebrow">Three worlds, one Ottertown</div>
+          <h2 class="sec-title">Pick a world. <em>Keep</em> your account.</h2>
+          <p class="sec-sub">Press PLAY and the world chooser opens. Each world is its own copy of Ottertown with its own players and its own live status. Your account works on all three; your pick is remembered between launches.</p>
+        </div>
+        <div class="worlds">
+          <article class="world reveal"><span class="n" aria-hidden="true">01</span><h3>World 1</h3><p>The main meadow. Where most people wake up, and where the first campfire gets crowded.</p><code>play.getlullpod.com</code></article>
+          <article class="world reveal" style="--d:.08s"><span class="n" aria-hidden="true">02</span><h3>World 2</h3><p>Same map, a quieter square. Good for a long uninterrupted mining session at the quarry.</p><code>play2.getlullpod.com</code></article>
+          <article class="world reveal" style="--d:.16s"><span class="n" aria-hidden="true">03</span><h3>World 3</h3><p>The spare. Turns green in the menu when the operator lights it up; otherwise it shows OFFLINE and waits.</p><code>play3.getlullpod.com</code></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ the world ============ -->
+    <section class="sec band">
+      <div class="shell">
+        <div class="bento">
+          <div class="tile w3 reveal" style="padding:34px">
+            <div class="eyebrow">The world</div>
+            <h3 style="font-size:36px;margin-top:14px">Waking up in Deepwood.</h3>
+            <p style="font-size:16px;margin-top:8px">You open your eyes in a hidden clearing: a cold campfire, four young oaks, one faint track out. Beyond it waits a 250×250 world — a decked village square, a ring road, three timber bridges over the river, a lake with piers, an orchard, a stone circle and a quarry full of ore.</p>
+            <div class="actions"><a class="btn ghost" href="world.html">Explore the world →</a></div>
+          </div>
+          <div class="tile w3 reveal" style="--d:.1s;padding:14px">
+            <div class="mosaic" aria-hidden="true">
+              <div class="tiles">
+                <i class="fo"></i><i class="fo"></i><i class="fo"></i><i class="fo"></i><i></i><i></i><i class="fo"></i><i class="fo"></i><i class="fo"></i><i class="fo"></i>
+                <i class="fo"></i><i class="fo"></i><i></i><i></i><i></i><i class="t2"></i><i></i><i class="fo"></i><i class="fo"></i><i class="fo"></i>
+                <i></i><i></i><i class="t2"></i><i class="tr"></i><i class="tr"></i><i></i><i></i><i></i><i></i><i class="fo"></i>
+                <i></i><i class="wat"></i><i class="wat"></i><i class="wat"></i><i class="ti"></i><i class="wat"></i><i class="wat"></i><i></i><i class="st"></i><i></i>
+                <i></i><i class="wat"></i><i class="wat"></i><i class="wat"></i><i class="wat"></i><i class="wat"></i><i></i><i class="st"></i><i class="st"></i><i></i>
+                <i></i><i></i><i class="tr"></i><i class="tr"></i><i></i><i></i><i></i><i class="st"></i><i></i><i></i>
+                <i></i><i class="fire"></i><i></i><i></i><i></i><i class="tr"></i><i class="tr"></i><i></i><i></i><i></i>
+              </div>
+              <span class="walker"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ villagers ============ -->
+    <section class="sec">
+      <div class="shell">
+        <div class="sec-head reveal">
+          <div class="eyebrow">Who lives here</div>
+          <h2 class="sec-title">Click anyone. <em>Someone</em> answers.</h2>
+        </div>
+        <div class="folk">
+          <article class="person reveal"><span class="av" aria-hidden="true">B</span><div><h3>Bartholomew Goldthread</h3><div class="role">Merchant · Trader</div><p>Plum coat, plumed hat, coin purse always full. He deals in sand and clay and never breaks character.</p></div></article>
+          <article class="person reveal" style="--d:.08s"><span class="av teal" aria-hidden="true">R</span><div><h3>Ryan the Historian</h3><div class="role">Chronicler</div><p>Ink-stained cuffs and one tome he will not put down. He remembers the town before it was Ottertown. No quests yet — just the story, if you ask.</p></div></article>
+          <article class="person reveal" style="--d:.16s"><span class="av rose" aria-hidden="true">J</span><div><h3>The jesters</h3><div class="role">Eighteen of them</div><p>Bells, motley and no explanation. They wander the walkable ground, mostly near the square. Inspect one and it has something to say.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ dev note ============ -->
+    <section class="sec tight">
+      <div class="shell">
+        <div class="note-card reveal">
+          <img src="assets/happy-yak.png" alt="Happy Yak Productions mascot — a highland yak with a green travel pack">
+          <div>
+            <blockquote>Hi. I'm Ryan, the one person making Greenhaven. It is early — really early — and you are trying it anyway. Thank you. Pick a name, walk out of the wood, and tell me what you find.</blockquote>
+            <cite>Otterdays — Happy Yak Productions</cite>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ changelog ============ -->
+    <section class="sec">
+      <div class="shell">
+        <div class="sec-head reveal">
+          <div class="eyebrow">What's new</div>
+          <h2 class="sec-title">Fresh off the <em>workbench</em>.</h2>
+        </div>
+        <div class="timeline">
+          <article class="tl reveal"><div class="when">v0.1.10 · September 2026</div><h3>One PLAY button, three worlds, a hello</h3><p>The main menu was rebuilt around a single PLAY button and a world chooser that finds Worlds 2 and 3 on its own. A short note from the dev greets you once per launch. "Remember username" on the log-in screen; passwords are deliberately never saved.</p></article>
+          <article class="tl reveal" style="--d:.08s"><div class="when">v0.1.10 · September 2026</div><h3>Chop, dig and level-up effects</h3><p>Bark chips fly off the tree, soil puffs off the spade, and a level-up shines the badge and sweeps the XP bar once. Everything respects the reduced-motion setting.</p></article>
+          <article class="tl reveal" style="--d:.16s"><div class="when">v0.1.8 · September 2026</div><h3>Fishing joins the ladders</h3><p>Six tiers of fish on one shared harvest contract. Nodes deplete and respawn on the server, so the pond you fish is the pond everyone fishes.</p></article>
+          <article class="tl reveal" style="--d:.24s"><div class="when">v0.1.8 · September 2026</div><h3>The town gets its name</h3><p>Ottertown, on the gate sign and on the map panel. The Historian remembers what it was called before.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ download ============ -->
+    <section class="sec" id="download">
+      <div class="shell">
+        <div class="sec-head center reveal">
+          <div class="eyebrow">Download</div>
+          <h2 class="sec-title">The meadow is <em>open</em>.</h2>
+          <p class="sec-sub" style="margin-inline:auto">Free. No launcher, no browser, no account needed to wander Single player. Make an account inside the game when you want your character kept.</p>
+        </div>
+        <div class="dl-grid">
+          <article class="dl reveal">
+            <div class="os"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 5.5 10.5 4.4v7.1H3zm0 13 7.5 1.1v-7.1H3zm8.5 1.3L21 21v-8.5h-9.5zM11.5 4.2 21 3v8.5h-9.5z"/></svg>Windows</div>
+            <ul><li>Windows 10 / 11, 64-bit</li><li>Installer with Start-menu shortcut</li><li>Any GPU with Vulkan or DirectX 12</li></ul>
+            <a class="btn gold" href="https://www.dropbox.com/scl/fi/5wnbg2ie49hfur2c7x07w/GreenhavenSetup.exe?rlkey=voe5gilo3is6j5h95es1tyhab&amp;st=x2enkdfn&amp;dl=1">Download GreenhavenSetup.exe</a>
+            <span class="fine">SmartScreen may warn on an unsigned installer — More info → Run anyway.</span>
+          </article>
+          <article class="dl reveal" style="--d:.08s">
+            <div class="os"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2c-2.5 0-4 2-4 4.5 0 1.3.3 2.2.1 3.2-.4 1.6-2.6 3.3-2.6 6 0 .6.1 1.2.3 1.7-.9.3-1.8.8-1.8 1.6 0 1 1.5 1.5 2.9 1.8.6 1 2.3 1.2 3.6.2.5.1 1 .1 1.5.1s1 0 1.5-.1c1.3 1 3 .8 3.6-.2 1.4-.3 2.9-.8 2.9-1.8 0-.8-.9-1.3-1.8-1.6.2-.5.3-1.1.3-1.7 0-2.7-2.2-4.4-2.6-6-.2-1 .1-1.9.1-3.2C16 4 14.5 2 12 2z"/></svg>Linux</div>
+            <ul><li>x86-64, glibc</li><li>Vulkan (Mesa) and ALSA or PipeWire</li><li>Untar, <code>chmod +x</code>, run</li></ul>
+            <a class="btn moss" href="https://www.dropbox.com/scl/fi/879lr5t2764r40r1vs7pr/Greenhaven-linux-20260917.tar.gz?rlkey=p2utkld8kdhymnxmqbs8xuqi9&amp;st=f24wg89z&amp;dl=1">Download Greenhaven-linux.tar.gz</a>
+            <span class="fine">Built 2026-09-17. Report anything odd on the GitHub repo.</span>
+          </article>
+        </div>
+
+        <div class="faq reveal" style="margin-top:40px">
+          <details><summary>Do I need an account?</summary><div class="a">Not to wander. Single player walks the map with no server and nothing on the wire. To keep a character across visits and worlds, create an account from the log-in screen inside the game.</div></details>
+          <details><summary>Is it really free?</summary><div class="a">Yes. There is no shop, no payment, no premium anything. Coins in the game are for the merchant.</div></details>
+          <details><summary>What is "Early Development"?</summary><div class="a">One developer, one meadow, four skills, no combat yet. Things change between versions and occasionally break. The world server is authoritative, so nothing you do can corrupt someone else's character.</div></details>
+          <details><summary>Where is my character saved?</summary><div class="a">On the world server, in PostgreSQL, keyed to your account. Positions flush every five seconds and when you leave; XP and inventory are written when they change.</div></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec tight">
+      <div class="shell">
+        <div class="cta reveal">
+          <div class="fireflies" aria-hidden="true"><i style="--x:10%;--y:40%;--t:9s"></i><i style="--x:25%;--y:75%;--t:11s;--d:-3s;--dx:-40px"></i><i style="--x:50%;--y:15%;--t:8s;--d:-5s"></i><i style="--x:70%;--y:65%;--t:12s;--d:-1s;--dx:50px;--dy:-20px"></i><i style="--x:88%;--y:30%;--t:10s;--d:-7s"></i></div>
+          <div class="eyebrow" style="justify-content:center">Play now</div>
+          <h2>Pick a name. Wake up in <em>Deepwood</em>.</h2>
+          <p>Leave today, come back next week, and the meadow remembers where you stood.</p>
+          <div class="actions center">
+            <a class="btn gold" href="https://www.dropbox.com/scl/fi/5wnbg2ie49hfur2c7x07w/GreenhavenSetup.exe?rlkey=voe5gilo3is6j5h95es1tyhab&amp;st=x2enkdfn&amp;dl=1">Download for Windows</a>
+            <a class="btn moss" href="https://www.dropbox.com/scl/fi/879lr5t2764r40r1vs7pr/Greenhaven-linux-20260917.tar.gz?rlkey=p2utkld8kdhymnxmqbs8xuqi9&amp;st=f24wg89z&amp;dl=1">Download for Linux</a>
+            <a class="btn ghost" href="play.html">How to play</a>
+          </div>
+          <p class="micro">v0.1.10 · EARLY DEVELOPMENT · WINDOWS &amp; LINUX</p>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <footer class="site">
     <div class="shell foot">
       <div class="f-brand">
-        <img class="yak" src="assets/happy-yak.png" alt="Happy Yak Productions mascot — a highland yak with a green travel pack">
+        <img class="yak" src="assets/happy-yak.png" alt="">
         <div>
           <strong>GREENHAVEN</strong>
-          <span>A Happy Yak Productions game<br>Otterdays — Main &amp; Lead Developer</span>
+          <span>A Happy Yak Productions game<br>Otterdays — main &amp; lead developer</span>
         </div>
       </div>
-      <nav class="f-links">
+      <div class="f-col">
+        <h4>Site</h4>
         <a href="play.html">How to play</a>
         <a href="world.html">The world</a>
+        <a href="#skills">Skill ladders</a>
         <a href="#download">Download</a>
-      </nav>
+      </div>
+      <div class="f-col">
+        <h4>Elsewhere</h4>
+        <a href="https://github.com/Otterdays/Greenhaven">This site on GitHub</a>
+        <a href="https://github.com/Otterdays/greenhaven-server">Server releases</a>
+      </div>
       <div class="f-meta">
         <span>&copy; <span id="year">2026</span> Happy Yak Productions</span>
-        <span>Rust world server &middot; Bevy client &middot; SQLite saves</span>
+        <span><code>rust</code> world server · <code>bevy 0.19</code> client · <code>postgres</code> saves · <code>v0.1.10</code></span>
       </div>
     </div>
   </footer>

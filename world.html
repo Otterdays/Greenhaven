@@ -1,20 +1,24 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>The world — Greenhaven</title>
-  <meta name="description" content="The Greenhaven MMORPG world: a 250x250 tile map — village square, ring road, three timber bridges, a lake with piers, a quarry, and the Deepwood clearing where you wake up.">
-  <meta name="theme-color" content="#f8f4e9">
+  <meta name="description" content="Ottertown and the 250×250 meadow around it: a decked square, a ring road, a river with three bridges, a lake, an orchard, a quarry, a stone circle — and Deepwood, where you wake up.">
+  <meta name="theme-color" content="#0c1510">
+  <meta property="og:title" content="The world — Greenhaven">
+  <meta property="og:description" content="A 250×250 world you can walk end to end.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://otterdays.github.io/Greenhaven/assets/happy-yak.png">
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-  <script>document.documentElement.classList.add('js')</script>
+  <script>document.documentElement.classList.replace('no-js','js')</script>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header class="site" id="header">
     <div class="shell">
       <a class="brand" href="index.html">
-        <span class="mark" aria-hidden="true"><svg viewBox="0 0 64 64" fill="none"><circle cx="32" cy="32" r="10" fill="#d9a544"/><g stroke="#d9a544" stroke-width="5" stroke-linecap="round"><path d="M32 8v7M32 49v7M8 32h7M49 32h7"/><path d="M15 15l5 5M44 44l5 5M49 15l-5 5M20 44l-5 5"/></g></svg></span>
+        <span class="mark" aria-hidden="true"><svg viewBox="0 0 64 64" fill="none"><circle cx="32" cy="32" r="10" fill="#e5b551"/><g stroke="#e5b551" stroke-width="5" stroke-linecap="round"><path d="M32 8v7M32 49v7M8 32h7M49 32h7"/><path d="M15 15l5 5M44 44l5 5M49 15l-5 5M20 44l-5 5"/></g></svg></span>
         GREENHAVEN <small>2D MMORPG</small>
       </a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
@@ -22,51 +26,136 @@
         <a href="index.html">Home</a>
         <a href="play.html">How to play</a>
         <a href="world.html" aria-current="page">The world</a>
-        <a class="btn primary sm" href="#download">Download</a>
+        <a href="index.html#skills">Skills</a>
+        <a class="btn gold sm" href="#download">Download</a>
       </nav>
     </div>
   </header>
 
   <div class="announce" role="status">
     <span class="dot" aria-hidden="true"></span>
-    <span>Now available on <strong>Windows</strong> &amp; <strong>Linux</strong></span>
-    <span class="badge">v0.1.7</span>
+    <span><strong>v0.1.10</strong> — one PLAY button, three worlds, fishing, and a hello from the dev</span>
+    <span class="badge">EARLY DEV</span>
   </div>
 
   <main>
     <section class="page-head">
+      <div class="stars" aria-hidden="true" id="stars"></div>
       <div class="shell">
-        <div class="eyebrow">Overworld</div>
-        <h1>The world</h1>
-        <p class="lede">A 250&times;250 map you can walk end to end: a decked village square at the centre, a ring road, a winding river with three timber bridges &mdash; and Deepwood, the clearing where you wake up.</p>
+        <div class="eyebrow">Overworld · Ottertown</div>
+        <h1>Two hundred and fifty<br>tiles <em>each way</em>.</h1>
+        <p class="lede">A 250×250 map you can walk end to end: a decked village square at the centre, a ring road, a winding river with three timber bridges — and Deepwood, the hidden clearing where you wake up.</p>
       </div>
     </section>
 
-    <section class="sec">
+    <section class="sec tight">
       <div class="shell">
-        <div class="grid-3">
-          <article class="card reveal">
+        <div class="map-fig reveal">
+          <svg viewBox="0 0 800 520" role="img" aria-labelledby="mapTitle">
+            <title id="mapTitle">Schematic of the Ottertown overworld, not to scale</title>
+            <defs>
+              <pattern id="grass" width="8" height="8" patternUnits="userSpaceOnUse"><rect width="8" height="8" fill="#1e3a26"/><circle cx="2" cy="2" r=".7" fill="#264a2f"/><circle cx="6" cy="6" r=".7" fill="#264a2f"/></pattern>
+              <pattern id="forest" width="12" height="12" patternUnits="userSpaceOnUse"><rect width="12" height="12" fill="#14281a"/><circle cx="6" cy="6" r="3" fill="#1a3320"/><circle cx="0" cy="0" r="2" fill="#1a3320"/></pattern>
+              <linearGradient id="water" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#2f7d9a"/><stop offset="1" stop-color="#24607a"/></linearGradient>
+              <radialGradient id="fire"><stop offset="0" stop-color="#ffd27a"/><stop offset=".5" stop-color="#e5883c"/><stop offset="1" stop-color="#e5883c" stop-opacity="0"/></radialGradient>
+            </defs>
+            <rect width="800" height="520" fill="url(#grass)"/>
+            <!-- forests -->
+            <path d="M0 0h230c-20 60-60 100-120 130S30 190 0 210z" fill="url(#forest)"/>
+            <path d="M560 0h240v140c-60-10-120-40-160-70s-60-40-80-70z" fill="url(#forest)"/>
+            <path d="M0 400c60-20 120-10 170 30s40 90 20 90H0z" fill="url(#forest)"/>
+            <!-- river -->
+            <path d="M520 0c-30 70 10 120-30 180s-120 80-110 150 60 110 40 190" fill="none" stroke="url(#water)" stroke-width="22" stroke-linecap="round"/>
+            <path d="M520 0c-30 70 10 120-30 180s-120 80-110 150 60 110 40 190" fill="none" stroke="#5fc1b7" stroke-width="2" stroke-dasharray="3 9" opacity=".5"/>
+            <!-- lake SW -->
+            <ellipse cx="120" cy="380" rx="86" ry="52" fill="url(#water)"/>
+            <rect x="150" y="360" width="46" height="6" fill="#8b6a3e"/><rect x="120" y="405" width="6" height="34" fill="#8b6a3e"/>
+            <!-- pond NE -->
+            <ellipse cx="690" cy="110" rx="34" ry="24" fill="url(#water)"/>
+            <!-- ring road + gates -->
+            <circle cx="400" cy="260" r="120" fill="none" stroke="#7d6748" stroke-width="10"/>
+            <path d="M400 140V60M400 380v80M280 260H180M520 260h100" stroke="#7d6748" stroke-width="10" stroke-linecap="round"/>
+            <!-- square -->
+            <rect x="352" y="212" width="96" height="96" rx="8" fill="#9a7a4b" stroke="#c9a266" stroke-width="2"/>
+            <rect x="372" y="232" width="56" height="56" rx="4" fill="#b08a55"/>
+            <!-- bridges -->
+            <g fill="#a2814f" stroke="#d6b27a" stroke-width="1.5">
+              <rect x="478" y="94" width="30" height="12" rx="2" transform="rotate(75 493 100)"/>
+              <rect x="440" y="192" width="30" height="12" rx="2" transform="rotate(-40 455 198)"/>
+              <rect x="405" y="378" width="30" height="12" rx="2" transform="rotate(-70 420 384)"/>
+            </g>
+            <!-- orchard NW -->
+            <g fill="#3d7a3f"><circle cx="110" cy="260" r="7"/><circle cx="132" cy="260" r="7"/><circle cx="154" cy="260" r="7"/><circle cx="110" cy="284" r="7"/><circle cx="132" cy="284" r="7"/><circle cx="154" cy="284" r="7"/><circle cx="110" cy="308" r="7"/><circle cx="132" cy="308" r="7"/><circle cx="154" cy="308" r="7"/></g>
+            <!-- farmstead + pen -->
+            <rect x="200" y="150" width="34" height="24" rx="2" fill="#8b5a3c"/><rect x="242" y="150" width="50" height="36" fill="none" stroke="#c9a266" stroke-width="2" stroke-dasharray="4 3"/>
+            <!-- stone circle -->
+            <g fill="#8c8c86"><circle cx="250" cy="430" r="3"/><circle cx="262" cy="422" r="3"/><circle cx="274" cy="430" r="3"/><circle cx="274" cy="444" r="3"/><circle cx="262" cy="452" r="3"/><circle cx="250" cy="444" r="3"/></g>
+            <!-- quarry SE -->
+            <path d="M600 380l70-30 60 40-20 70-90 10z" fill="#5a5a55"/>
+            <g fill="#e5b551"><circle cx="640" cy="400" r="3"/><circle cx="680" cy="420" r="3"/><circle cx="655" cy="445" r="3"/></g>
+            <g fill="#5fc1b7"><circle cx="700" cy="395" r="2.5"/><circle cx="625" cy="430" r="2.5"/></g>
+            <!-- birch grove NE -->
+            <g fill="#d8dcc8"><circle cx="650" cy="80" r="4"/><circle cx="735" cy="90" r="4"/><circle cx="720" cy="140" r="4"/><circle cx="660" cy="145" r="4"/></g>
+            <!-- deepwood + campfire -->
+            <circle cx="60" cy="90" r="26" fill="#1e3a26"/>
+            <circle cx="60" cy="90" r="6" fill="url(#fire)"/>
+            <g fill="#3d7a3f"><circle cx="44" cy="76" r="5"/><circle cx="76" cy="76" r="5"/><circle cx="44" cy="106" r="5"/><circle cx="76" cy="106" r="5"/></g>
+            <path d="M86 92c30 10 60 30 90 60" fill="none" stroke="#5b4a33" stroke-width="3" stroke-dasharray="5 6"/>
+            <!-- labels -->
+            <g class="lm"><circle cx="400" cy="260" r="5" fill="#e5b551"/><text x="400" y="330" text-anchor="middle">Village square</text></g>
+            <g class="lm"><circle cx="60" cy="90" r="5" fill="#e5b551"/><text x="60" y="130" text-anchor="middle">Deepwood</text></g>
+            <g class="lm"><circle cx="120" cy="380" r="5" fill="#e5b551"/><text x="120" y="450" text-anchor="middle">The lake</text></g>
+            <g class="lm"><circle cx="132" cy="284" r="5" fill="#e5b551"/><text x="132" y="335" text-anchor="middle">Orchard</text></g>
+            <g class="lm"><circle cx="262" cy="437" r="5" fill="#e5b551"/><text x="262" y="475" text-anchor="middle">Stone circle</text></g>
+            <g class="lm"><circle cx="660" cy="420" r="5" fill="#e5b551"/><text x="660" y="490" text-anchor="middle">The quarry</text></g>
+            <g class="lm"><circle cx="690" cy="110" r="5" fill="#e5b551"/><text x="690" y="165" text-anchor="middle">Birch grove</text></g>
+            <g class="lm"><circle cx="245" cy="168" r="5" fill="#e5b551"/><text x="245" y="205" text-anchor="middle">Farmstead</text></g>
+            <text x="790" y="510" text-anchor="end" opacity=".55">Schematic · not to scale</text>
+          </svg>
+          <div class="legend">
+            <span><i style="--s:#9a7a4b"></i>Decked square</span>
+            <span><i style="--s:#7d6748"></i>Ring road &amp; gates</span>
+            <span><i style="--s:#2f7d9a"></i>River, lake, pond</span>
+            <span><i style="--s:#a2814f"></i>Timber bridges</span>
+            <span><i style="--s:#1a3320"></i>Old-growth forest</span>
+            <span><i style="--s:#5a5a55"></i>Quarry</span>
+            <span><i style="--s:#e5b551"></i>Landmark</span>
+          </div>
+        </div>
+        <div class="landmarks">
+          <div class="lmk reveal"><b>01</b><div><h4>Deepwood</h4><p>Where you wake: old-growth, a cold campfire, four young oaks, one faint track out. The first 25 XP in the game is right here.</p></div></div>
+          <div class="lmk reveal" style="--d:.05s"><b>02</b><div><h4>Village square</h4><p>Decked boards, four gate roads, a ring road around it, the merchant's stall and the sign that welcomes you to Ottertown.</p></div></div>
+          <div class="lmk reveal" style="--d:.1s"><b>03</b><div><h4>The river</h4><p>Winds from the north edge to the south, crossed by three timber bridges. Fishing spots along the banks.</p></div></div>
+          <div class="lmk reveal" style="--d:.15s"><b>04</b><div><h4>The lake</h4><p>South-west, with two piers and a promenade. The quietest place to fish and the longest walk from the square.</p></div></div>
+          <div class="lmk reveal" style="--d:.2s"><b>05</b><div><h4>The quarry</h4><p>South-east, stacked with ore and gem veins — copper at the mouth, diamond at the back for those with the level to open it.</p></div></div>
+          <div class="lmk reveal" style="--d:.25s"><b>06</b><div><h4>Orchard &amp; farmstead</h4><p>North-west. Rows of chop-ready trees, a farmhouse and a herd pen where the cows drift after each other.</p></div></div>
+          <div class="lmk reveal" style="--d:.3s"><b>07</b><div><h4>Birch grove</h4><p>North-east, around a small pond. White birch is scenery — it shades the path and refuses the axe.</p></div></div>
+          <div class="lmk reveal" style="--d:.35s"><b>08</b><div><h4>Stone circle</h4><p>Standing quiet in the southern fields. Nobody has explained it yet. The Historian may.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec band">
+      <div class="shell">
+        <div class="sec-head reveal">
+          <div class="eyebrow">The rules of the ground</div>
+          <h2 class="sec-title">What carries you. What <em>stops</em> you.</h2>
+        </div>
+        <div class="bento">
+          <article class="tile w2 reveal">
             <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17c3-2 6-2 9-4s6-2 9-4"/><path d="M3 12c3-2 6-2 9-4s6-2 9-4"/></svg></span>
             <h3>The ground carries you</h3>
-            <ul class="ticks">
-              <li>Meadow, trail and road</li>
-              <li>Boardwalk, dock and corduroy</li>
-              <li>Timber bridges over the river</li>
-            </ul>
+            <ul class="ticks"><li>Meadow, trail and road</li><li>Boardwalk, dock and corduroy</li><li>Timber bridges over the river</li><li>Ramps up onto the quarry shelves</li></ul>
           </article>
-          <article class="card reveal" style="--d:.08s">
-            <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 7 11h3l-4 6h12l-4-6h3z"/><path d="M12 17v4"/><path d="M3 20h7M14 20h7"/></svg></span>
+          <article class="tile w2 reveal" style="--d:.08s">
+            <span class="icon gold" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 7 11h3l-4 6h12l-4-6h3z"/><path d="M12 17v4"/><path d="M3 20h7M14 20h7"/></svg></span>
             <h3>These stop you</h3>
-            <ul class="ticks">
-              <li>Water and fishing spots</li>
-              <li>Forest and old-growth trees</li>
-              <li>Stone, rocks and clay mounds</li>
-            </ul>
+            <ul class="ticks"><li>Water, reeds, lilies and fishing spots</li><li>Forest and old-growth trees</li><li>Stone, rocks and clay mounds</li><li>Fences, walls and stalls</li></ul>
           </article>
-          <article class="card reveal" style="--d:.16s">
-            <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M16.2 7.8l-2.1 6.3-6.3 2.1 2.1-6.3z"/></svg></span>
+          <article class="tile w2 reveal" style="--d:.16s">
+            <span class="icon teal" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M16.2 7.8l-2.1 6.3-6.3 2.1 2.1-6.3z"/></svg></span>
             <h3>Who is in charge</h3>
-            <p>You send where you want to go. The world decides where you stand, so you cannot slip through a tree on the diagonal.</p>
+            <p>You send where you want to go. The world decides where you stand, twenty times a second, so you cannot slip through a tree on the diagonal — and neither can anyone else.</p>
           </article>
         </div>
       </div>
@@ -75,34 +164,21 @@
     <section class="sec">
       <div class="shell">
         <div class="sec-head reveal">
-          <div class="eyebrow">Landmarks</div>
-          <h2 class="sec-title">What is out there.</h2>
-          <p class="sec-sub">Colours change, the path bends, and something worth clicking waits at almost every turn.</p>
+          <div class="eyebrow">Who lives here</div>
+          <h2 class="sec-title">Twenty souls and a <em>herd</em>.</h2>
         </div>
-        <div class="duo">
-          <article class="card reveal">
-            <h3>Across the map</h3>
-            <ul class="ticks">
-              <li>A decked village square with four gate roads and a ring road around it.</li>
-              <li>A winding river crossed by three timber bridges.</li>
-              <li>A south-west lake with two piers and a promenade.</li>
-              <li>An orchard in the north-west, and a farmstead with a herd pen.</li>
-            </ul>
-          </article>
-          <article class="card reveal" style="--d:.1s">
-            <h3>Worth the walk</h3>
-            <ul class="ticks">
-              <li>A stone circle standing quiet in the fields.</li>
-              <li>A south-east quarry stacked with ore and gem veins.</li>
-              <li>A north-east birch grove around a small pond.</li>
-              <li>Deepwood: old-growth, a cold campfire, four young oaks, and one faint track out.</li>
-            </ul>
-          </article>
+        <div class="folk">
+          <article class="person reveal"><span class="av" aria-hidden="true">B</span><div><h3>Bartholomew Goldthread</h3><div class="role">Merchant · the square</div><p>Plum coat, plumed hat, coin purse always full. Buys and sells sand and clay. Never breaks character.</p></div></article>
+          <article class="person reveal" style="--d:.08s"><span class="av teal" aria-hidden="true">R</span><div><h3>Ryan the Historian</h3><div class="role">Chronicler</div><p>Grey beard, teal robe, leather tome. He remembers the town before it was Ottertown, back when the old name hung over the gate.</p></div></article>
+          <article class="person reveal" style="--d:.16s"><span class="av rose" aria-hidden="true">J</span><div><h3>Eighteen jesters</h3><div class="role">Wanderers</div><p>Bells and motley, drifting over walkable ground. Inspect one; each has a line.</p></div></article>
+          <article class="person reveal" style="--d:.24s"><span class="av moss" aria-hidden="true">C</span><div><h3>The herd</h3><div class="role">Livestock · farmstead</div><p>White cows with brown patches. They graze where they stand, drift after each other, and shy away when you crowd them.</p></div></article>
+          <article class="person reveal" style="--d:.32s"><span class="av" aria-hidden="true">?</span><div><h3>The frogs, turtles and fireflies</h3><div class="role">Waterside</div><p>Frogs sit and blink at the pond edge, turtles bask and tuck their heads, fireflies rise off the fen after dark.</p></div></article>
+          <article class="person reveal" style="--d:.4s"><span class="av teal" aria-hidden="true">+</span><div><h3>Coming to the fire</h3><div class="role">Planned</div><p>A miner, a woodcutter, a fisherman, a farmer, a herder. And a king named Bramblejaw who is short on patience.</p></div></article>
         </div>
       </div>
     </section>
 
-    <section class="sec">
+    <section class="sec tight">
       <div class="shell">
         <div class="futures reveal">
           <h2>Six seats by the fire</h2>
@@ -114,16 +190,16 @@
     <section class="sec" id="download">
       <div class="shell">
         <div class="cta reveal">
-          <div class="fireflies" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
-          <div class="eyebrow">Play now</div>
-          <h2>Walk it yourself.</h2>
+          <div class="fireflies" aria-hidden="true"><i style="--x:10%;--y:40%;--t:9s"></i><i style="--x:25%;--y:75%;--t:11s;--d:-3s;--dx:-40px"></i><i style="--x:50%;--y:15%;--t:8s;--d:-5s"></i><i style="--x:70%;--y:65%;--t:12s;--d:-1s;--dx:50px;--dy:-20px"></i><i style="--x:88%;--y:30%;--t:10s;--d:-7s"></i></div>
+          <div class="eyebrow" style="justify-content:center">Play now</div>
+          <h2>Walk it <em>yourself</em>.</h2>
           <p>Download the native client and the first thing you will see is Deepwood. Everything after that is up to your feet.</p>
           <div class="actions center">
-            <a class="btn gold" href="https://www.dropbox.com/scl/fi/5wnbg2ie49hfur2c7x07w/GreenhavenSetup.exe?rlkey=voe5gilo3is6j5h95es1tyhab&amp;st=x2enkdfn&amp;dl=0">Download for Windows</a>
-            <a class="btn gold" href="https://www.dropbox.com/scl/fi/879lr5t2764r40r1vs7pr/Greenhaven-linux-20260917.tar.gz?rlkey=p2utkld8kdhymnxmqbs8xuqi9&amp;st=f24wg89z&amp;dl=1">Download for Linux</a>
-            <a class="btn ghost-dark" href="play.html">How to play</a>
+            <a class="btn gold" href="https://www.dropbox.com/scl/fi/5wnbg2ie49hfur2c7x07w/GreenhavenSetup.exe?rlkey=voe5gilo3is6j5h95es1tyhab&amp;st=x2enkdfn&amp;dl=1">Download for Windows</a>
+            <a class="btn moss" href="https://www.dropbox.com/scl/fi/879lr5t2764r40r1vs7pr/Greenhaven-linux-20260917.tar.gz?rlkey=p2utkld8kdhymnxmqbs8xuqi9&amp;st=f24wg89z&amp;dl=1">Download for Linux</a>
+            <a class="btn ghost" href="play.html">How to play</a>
           </div>
-          <p class="micro">Windows &amp; Linux clients available now &middot; v0.1.7 Early Development</p>
+          <p class="micro">v0.1.10 · EARLY DEVELOPMENT · WINDOWS &amp; LINUX</p>
         </div>
       </div>
     </section>
@@ -132,20 +208,27 @@
   <footer class="site">
     <div class="shell foot">
       <div class="f-brand">
-        <img class="yak" src="assets/happy-yak.png" alt="Happy Yak Productions mascot — a highland yak with a green travel pack">
+        <img class="yak" src="assets/happy-yak.png" alt="">
         <div>
           <strong>GREENHAVEN</strong>
-          <span>A Happy Yak Productions game<br>Otterdays — Main &amp; Lead Developer</span>
+          <span>A Happy Yak Productions game<br>Otterdays — main &amp; lead developer</span>
         </div>
       </div>
-      <nav class="f-links">
+      <div class="f-col">
+        <h4>Site</h4>
         <a href="play.html">How to play</a>
         <a href="world.html">The world</a>
-        <a href="#download">Download</a>
-      </nav>
+        <a href="index.html#skills">Skill ladders</a>
+        <a href="index.html#download">Download</a>
+      </div>
+      <div class="f-col">
+        <h4>Elsewhere</h4>
+        <a href="https://github.com/Otterdays/Greenhaven">This site on GitHub</a>
+        <a href="https://github.com/Otterdays/greenhaven-server">Server releases</a>
+      </div>
       <div class="f-meta">
         <span>&copy; <span id="year">2026</span> Happy Yak Productions</span>
-        <span>Rust world server &middot; Bevy client &middot; SQLite saves</span>
+        <span><code>rust</code> world server · <code>bevy 0.19</code> client · <code>postgres</code> saves · <code>v0.1.10</code></span>
       </div>
     </div>
   </footer>
