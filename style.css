@@ -369,6 +369,10 @@ footer.site{margin-top:40px;border-top:1px solid var(--line);background:rgba(0,0
 .f-col a:hover{color:var(--ink)}
 .f-meta{grid-column:1/-1;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;padding-top:22px;border-top:1px solid var(--line);font-size:12.5px;color:var(--muted)}
 .f-meta code{font-family:var(--font-mono);color:var(--ink-2)}
+.f-thanks{grid-column:1/-1;margin-top:12px;font-size:12px;line-height:1.7;color:var(--muted)}
+.f-thanks strong{color:var(--ink-2);font-weight:600}
+.f-thanks code{font-family:var(--font-mono);font-size:11px;color:var(--ink-2)}
+.f-thanks [title]{border-bottom:1px dotted var(--line-2);cursor:help}
 
 /* ---------- reveal ---------- */
 .js .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease var(--d,0s),transform .7s cubic-bezier(.2,.8,.2,1) var(--d,0s)}
