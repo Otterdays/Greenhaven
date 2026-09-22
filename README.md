@@ -8,7 +8,7 @@ A native 2D MMORPG built with Rust and Bevy. One shared meadow, four skill ladde
 
 | Platform | Link |
 | --- | --- |
-| Windows | [GreenhavenSetup.exe](https://www.dropbox.com/scl/fi/5wnbg2ie49hfur2c7x07w/GreenhavenSetup.exe?rlkey=voe5gilo3is6j5h95es1tyhab&st=x2enkdfn&dl=1) |
+| Windows | [GreenhavenSetup.exe](https://www.dropbox.com/scl/fi/wv8e01vxzanw3lntmc4ag/GreenhavenSetup-0.1.10.exe?rlkey=sbpo7itw6ucvzhaqq1g83645r&st=zejp8vbt&dl=1) |
 | Linux | [Greenhaven-linux-20260917.tar.gz](https://www.dropbox.com/scl/fi/879lr5t2764r40r1vs7pr/Greenhaven-linux-20260917.tar.gz?rlkey=p2utkld8kdhymnxmqbs8xuqi9&st=f24wg89z&dl=1) |
 
 ## The game
