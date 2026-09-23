@@ -70,6 +70,34 @@
     });
   });
 
+  // ---- live world status ----
+  // Point this at an HTTP(S) JSON endpoint shaped like {"1":"online","2":"online","3":"offline"}.
+  // Hostnames never appear in the page; leave empty to show "status in game".
+  var STATUS_URL = '';
+  var LABELS = { online: 'Online', offline: 'Offline', unknown: 'Status in game' };
+  var statusEls = document.querySelectorAll('[data-world]');
+  function paint(states) {
+    statusEls.forEach(function (el) {
+      var st = states[el.getAttribute('data-world')] || 'unknown';
+      if (st !== 'online' && st !== 'offline') st = 'unknown';
+      var target = el.classList.contains('world') ? el.querySelector('.live-pill') : el;
+      if (!target) return;
+      target.setAttribute('data-state', st);
+      var b = target.querySelector('b');
+      if (b) b.textContent = LABELS[st];
+    });
+  }
+  function poll() {
+    if (!STATUS_URL || !window.fetch) { paint({}); return; }
+    fetch(STATUS_URL, { cache: 'no-store' })
+      .then(function (r) { return r.ok ? r.json() : {}; })
+      .then(paint, function () { paint({}); });
+  }
+  if (statusEls.length) {
+    poll();
+    if (STATUS_URL) setInterval(poll, 60000);
+  }
+
   // ---- ladder tabs ----
   document.querySelectorAll('[role=tablist]').forEach(function (list) {
     var tabs = Array.prototype.slice.call(list.querySelectorAll('[role=tab]'));

@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Skill ladders — Greenhaven</title>
+  <meta name="description" content="Four skills to 99 in Greenhaven: every tree, rock and fish with its level and real XP values.">
+  <meta name="theme-color" content="#0c1510">
+  <meta property="og:title" content="Skill ladders — Greenhaven">
+  <meta property="og:description" content="Four skills to 99 in Greenhaven: every tree, rock and fish with its level and real XP values.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://otterdays.github.io/Greenhaven/skills.html">
+  <meta property="og:image" content="https://otterdays.github.io/Greenhaven/assets/happy-yak.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <script>document.documentElement.classList.replace('no-js','js')</script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<body>
+  <header class="site" id="header">
+    <div class="shell">
+      <a class="brand" href="index.html">
+        <span class="mark" aria-hidden="true"><svg viewBox="0 0 64 64" fill="none"><circle cx="32" cy="32" r="10" fill="#e5b551"/><g stroke="#e5b551" stroke-width="5" stroke-linecap="round"><path d="M32 8v7M32 49v7M8 32h7M49 32h7"/><path d="M15 15l5 5M44 44l5 5M49 15l-5 5M20 44l-5 5"/></g></svg></span>
+        GREENHAVEN <small>2D MMORPG</small>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav class="top" id="site-nav">
+        <a href="index.html">Home</a>
+        <a href="play.html">How to play</a>
+        <a href="world.html">The world</a>
+        <a href="skills.html" aria-current="page">Skills</a>
+        <a href="news.html">News</a>
+        <a class="btn gold sm" href="download.html">Download</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="announce" role="status">
+    <span class="dot" aria-hidden="true"></span>
+    <span><strong>v0.1.11</strong> is here — one PLAY button, three worlds, fishing, and a hello from the dev</span>
+    <span class="badge">EARLY DEV</span>
+  </div>
+
+  <main>
+    <section class="page-head">
+      <div class="stars" aria-hidden="true" id="stars"></div>
+      <div class="shell">
+        <div class="eyebrow">Skill ladders · 1 – 99</div>
+        <h1>Train while you<br><em>wander</em>.</h1>
+        <p class="lede">Four skills climb to 99 and every point of XP is saved. The numbers below are the real ones from the shared rules crate — the same online and in Single player.</p>
+      </div>
+    </section>
+
+    <section class="sec band tight" id="skills">
+      <div class="fireflies" aria-hidden="true"><i style="--x:8%;--y:30%;--t:9s"></i><i style="--x:30%;--y:70%;--t:11s;--d:-3s;--dx:-40px"></i><i style="--x:55%;--y:20%;--t:8s;--d:-5s"></i><i style="--x:80%;--y:60%;--t:12s;--d:-1s;--dx:50px;--dy:-20px"></i><i style="--x:92%;--y:35%;--t:10s;--d:-7s"></i></div>
+      <div class="shell">
+        <div class="skills">
+          <article class="skill wood reveal" style="--fill:78%">
+            <span class="lvl">Level 1 – 99</span>
+            <h3>Woodcutting</h3>
+            <p>Nine tree kinds, roughly one every ten levels — from the young oak by your first campfire to the elderwood at 80.</p>
+            <div class="bar" aria-hidden="true"><i></i></div>
+            <div class="xp"><span>+25 → +285 / chop</span><span>9 trees</span></div>
+          </article>
+          <article class="skill mine reveal" style="--fill:62%;--d:.08s">
+            <span class="lvl">Level 1 – 99</span>
+            <h3>Mining</h3>
+            <p>Twenty rock kinds from plain stone at level 1 to diamond at 90. Ores, gems, mithril, orichalcum. The rocks never run out.</p>
+            <div class="bar" aria-hidden="true"><i></i></div>
+            <div class="xp"><span>+20 → +340 / mine</span><span>20 rocks</span></div>
+          </article>
+          <article class="skill fish reveal" style="--fill:50%;--d:.16s">
+            <span class="lvl">Level 1 – 99</span>
+            <h3>Fishing</h3>
+            <p>Six tiers from the minnow at level 1 to the mooncale at 80. Stand still at a spot, cast, and a few seconds later something pulls back.</p>
+            <div class="bar" aria-hidden="true"><i></i></div>
+            <div class="xp"><span>+20 → +270 / catch</span><span>6 fish</span></div>
+          </article>
+          <article class="skill stride reveal" style="--fill:45%;--d:.24s">
+            <span class="lvl">Level 1 – 99</span>
+            <h3>Stride</h3>
+            <p>Hold Shift to sprint at 2× walk speed. A fresh cell pays +4 Stride XP; warm ground pays breath back, not XP.</p>
+            <div class="bar" aria-hidden="true"><i></i></div>
+            <div class="xp"><span>+4 / fresh cell</span><span>2.5 s warm trail</span></div>
+          </article>
+        </div>
+
+        <div class="reveal">
+          <div class="tabs" role="tablist" aria-label="Skill ladders">
+            <button role="tab" aria-selected="true" aria-controls="lad-wood" id="tab-wood">Trees</button>
+            <button role="tab" aria-selected="false" aria-controls="lad-mine" id="tab-mine">Rocks</button>
+            <button role="tab" aria-selected="false" aria-controls="lad-fish" id="tab-fish">Fish</button>
+          </div>
+          <div class="ladder on" id="lad-wood" role="tabpanel" aria-labelledby="tab-wood">
+            <div class="ladder-wrap"><table>
+              <thead><tr><th>Tree</th><th>Level</th><th>XP per chop</th><th>Log</th></tr></thead>
+              <tbody>
+                <tr><td>Young oak</td><td class="lv">1</td><td><span class="meter" style="--w:9%"><i></i></span><span class="xpv">25</span></td><td>Young oak log</td></tr>
+                <tr><td>Pine</td><td class="lv">10</td><td><span class="meter" style="--w:14%"><i></i></span><span class="xpv">40</span></td><td>Pine log</td></tr>
+                <tr><td>Ancient oak</td><td class="lv">30</td><td><span class="meter" style="--w:30%"><i></i></span><span class="xpv">85</span></td><td>Ancient oak log</td></tr>
+                <tr><td>Willow</td><td class="lv">50</td><td><span class="meter" style="--w:53%"><i></i></span><span class="xpv">150</span></td><td>Willow log</td></tr>
+                <tr><td>Redwood</td><td class="lv">60</td><td><span class="meter" style="--w:67%"><i></i></span><span class="xpv">190</span></td><td>Redwood log</td></tr>
+                <tr><td>Silverwood</td><td class="lv">70</td><td><span class="meter" style="--w:82%"><i></i></span><span class="xpv">235</span></td><td>Silverwood log</td></tr>
+                <tr><td>Elderwood</td><td class="lv">80</td><td><span class="meter" style="--w:100%"><i></i></span><span class="xpv">285</span></td><td>Elderwood log</td></tr>
+              </tbody>
+            </table></div>
+            <div class="note">Seven of the nine cuttable kinds shown. English oak and white birch are scenery — they shade the road and refuse the axe.</div>
+          </div>
+          <div class="ladder" id="lad-mine" role="tabpanel" aria-labelledby="tab-mine" hidden>
+            <div class="ladder-wrap"><table>
+              <thead><tr><th>Rock</th><th>Level</th><th>XP per mine</th><th>Yield</th></tr></thead>
+              <tbody>
+                <tr><td>Copper rock</td><td class="lv">1</td><td><span class="meter" style="--w:9%"><i></i></span><span class="xpv">30</span></td><td>Copper ore</td></tr>
+                <tr><td>Tin rock</td><td class="lv">5</td><td><span class="meter" style="--w:10%"><i></i></span><span class="xpv">35</span></td><td>Tin ore</td></tr>
+                <tr><td>Iron rock</td><td class="lv">10</td><td><span class="meter" style="--w:13%"><i></i></span><span class="xpv">45</span></td><td>Iron ore</td></tr>
+                <tr><td>Coal rock</td><td class="lv">20</td><td><span class="meter" style="--w:18%"><i></i></span><span class="xpv">60</span></td><td>Coal</td></tr>
+                <tr><td>Silver rock</td><td class="lv">25</td><td><span class="meter" style="--w:21%"><i></i></span><span class="xpv">72</span></td><td>Silver ore</td></tr>
+                <tr><td>Gold rock</td><td class="lv">30</td><td><span class="meter" style="--w:25%"><i></i></span><span class="xpv">85</span></td><td>Gold ore</td></tr>
+                <tr><td>Ruby rock</td><td class="lv">40</td><td><span class="meter" style="--w:34%"><i></i></span><span class="xpv">115</span></td><td>Ruby</td></tr>
+                <tr><td>Mithril rock</td><td class="lv">45</td><td><span class="meter" style="--w:39%"><i></i></span><span class="xpv">132</span></td><td>Mithril ore</td></tr>
+                <tr><td>Emerald rock</td><td class="lv">50</td><td><span class="meter" style="--w:44%"><i></i></span><span class="xpv">150</span></td><td>Emerald</td></tr>
+                <tr><td>Topaz rock</td><td class="lv">55</td><td><span class="meter" style="--w:49%"><i></i></span><span class="xpv">168</span></td><td>Topaz</td></tr>
+                <tr><td>Sapphire rock</td><td class="lv">60</td><td><span class="meter" style="--w:56%"><i></i></span><span class="xpv">190</span></td><td>Sapphire</td></tr>
+                <tr><td>Adamantite rock</td><td class="lv">65</td><td><span class="meter" style="--w:62%"><i></i></span><span class="xpv">210</span></td><td>Adamantite ore</td></tr>
+                <tr><td>Amethyst rock</td><td class="lv">70</td><td><span class="meter" style="--w:69%"><i></i></span><span class="xpv">235</span></td><td>Amethyst</td></tr>
+                <tr><td>Orichalcum rock</td><td class="lv">75</td><td><span class="meter" style="--w:76%"><i></i></span><span class="xpv">260</span></td><td>Orichalcum ore</td></tr>
+                <tr><td>Onyx rock</td><td class="lv">80</td><td><span class="meter" style="--w:84%"><i></i></span><span class="xpv">285</span></td><td>Onyx</td></tr>
+                <tr><td>Opal rock</td><td class="lv">85</td><td><span class="meter" style="--w:91%"><i></i></span><span class="xpv">310</span></td><td>Opal</td></tr>
+                <tr><td>Diamond rock</td><td class="lv">90</td><td><span class="meter" style="--w:100%"><i></i></span><span class="xpv">340</span></td><td>Diamond</td></tr>
+              </tbody>
+            </table></div>
+            <div class="note">Plus plain rock, granite boulders and rock clusters at level 1 for stone. Twenty kinds in all. One swing a second, and nothing ever runs dry.</div>
+          </div>
+          <div class="ladder" id="lad-fish" role="tabpanel" aria-labelledby="tab-fish" hidden>
+            <div class="ladder-wrap"><table>
+              <thead><tr><th>Fish</th><th>Level</th><th>XP per catch</th><th>Cast time</th></tr></thead>
+              <tbody>
+                <tr><td>Minnow</td><td class="lv">1</td><td><span class="meter" style="--w:7%"><i></i></span><span class="xpv">20</span></td><td>2.5 s</td></tr>
+                <tr><td>Silverfin</td><td class="lv">15</td><td><span class="meter" style="--w:17%"><i></i></span><span class="xpv">45</span></td><td>3.0 s</td></tr>
+                <tr><td>Trout</td><td class="lv">30</td><td><span class="meter" style="--w:30%"><i></i></span><span class="xpv">80</span></td><td>3.5 s</td></tr>
+                <tr><td>Salmon</td><td class="lv">45</td><td><span class="meter" style="--w:48%"><i></i></span><span class="xpv">130</span></td><td>4.0 s</td></tr>
+                <tr><td>Lanternfish</td><td class="lv">60</td><td><span class="meter" style="--w:70%"><i></i></span><span class="xpv">190</span></td><td>4.5 s</td></tr>
+                <tr><td>Mooncale</td><td class="lv">80</td><td><span class="meter" style="--w:100%"><i></i></span><span class="xpv">270</span></td><td>5.0 s</td></tr>
+              </tbody>
+            </table></div>
+            <div class="note">Every fishing spot is one tier. Walk up, click, stand still — move and the cast is lost. Same values online and in Single player.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ stats ============ -->
+    <section class="sec tight">
+      <div class="shell">
+        <div class="stats reveal">
+          <div class="stat"><b><span class="count" data-to="250">0</span><i>×250</i></b><span>tiles of hand-painted world</span></div>
+          <div class="stat"><b><span class="count" data-to="4">0</span><i>× 99</i></b><span>skill ladders, every level saved</span></div>
+          <div class="stat"><b class="count" data-to="20">0</b><span>mineable rock kinds</span></div>
+          <div class="stat"><b class="count" data-to="3">0</b><span>worlds on one account</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec tight">
+      <div class="shell">
+        <div class="cta reveal">
+          <div class="fireflies" aria-hidden="true"><i style="--x:10%;--y:40%;--t:9s"></i><i style="--x:25%;--y:75%;--t:11s;--d:-3s;--dx:-40px"></i><i style="--x:50%;--y:15%;--t:8s;--d:-5s"></i><i style="--x:70%;--y:65%;--t:12s;--d:-1s;--dx:50px;--dy:-20px"></i><i style="--x:88%;--y:30%;--t:10s;--d:-7s"></i></div>
+          <div class="eyebrow" style="justify-content:center">Play now</div>
+          <h2>Go get your <em>first log</em>.</h2>
+          <p>The young oak by the campfire is level 1. Everything after that is a habit.</p>
+          <div class="actions center">
+            <a class="btn gold" href="https://www.dropbox.com/scl/fi/g5m51n0lemmww4q5o4rdx/GreenhavenSetup-0.1.11.exe?rlkey=i6n2mcfbrtcascigd8s4uzt7a&amp;dl=1">Download for Windows</a>
+            <a class="btn moss" href="https://www.dropbox.com/scl/fi/879lr5t2764r40r1vs7pr/Greenhaven-linux-20260917.tar.gz?rlkey=p2utkld8kdhymnxmqbs8xuqi9&amp;st=f24wg89z&amp;dl=1">Download for Linux</a>
+            <a class="btn ghost" href="play.html">How to play</a>
+          </div>
+          <p class="micro">v0.1.11 · EARLY DEVELOPMENT · WINDOWS &amp; LINUX</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+  <footer class="site">
+    <div class="shell foot">
+      <div class="f-brand">
+        <img class="yak" src="assets/happy-yak.png" alt="">
+        <div>
+          <strong>GREENHAVEN</strong>
+          <span>A Happy Yak Productions game<br>Otterdays — main &amp; lead developer</span>
+        </div>
+      </div>
+      <div class="f-col">
+        <h4>Site</h4>
+        <a href="play.html">How to play</a>
+        <a href="world.html">The world</a>
+        <a href="skills.html">Skill ladders</a>
+        <a href="news.html">News</a>
+        <a href="download.html">Download</a>
+      </div>
+      <div class="f-meta">
+        <span>&copy; <span id="year">2026</span> Happy Yak Productions</span>
+        <span><code>rust</code> world server · <code>bevy 0.19</code> client · <code>postgres</code> saves · <code>v0.1.11</code></span>
+      </div>
+      <div class="f-thanks">
+        <span>Built by <strong>Otterdays</strong> · network help from <strong>Antares</strong> · with a quiet shoutout to <code>Qwen-3.8-Flash</code>, <code>Opus&nbsp;5</code>, <code>Opus&nbsp;5.5</code> &amp; <code title="the sleeper model">Qwen&nbsp;Sonus</code></span>
+      </div>
+    </div>
+  </footer>
+  <script src="site.js"></script>
+</body>
+</html>
