@@ -13,11 +13,10 @@
   <meta property="og:image" content="https://otterdays.github.io/Greenhaven/assets/happy-yak.png">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-  <link rel="preload" as="image" href="assets/gameplay.gif">
+  <link rel="preload" as="image" href="assets/hero-meadow.png">
   <script>document.documentElement.classList.replace('no-js','js')</script>
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
 <body>
   <header class="site" id="header">
     <div class="shell">
@@ -38,234 +37,29 @@
     </div>
   </header>
 
-  <div class="announce" role="status">
-    <span class="dot" aria-hidden="true"></span>
-    <span><strong>v0.1.13</strong> is here</span>
-    <span class="badge">EARLY DEV</span>
-  </div>
-
   <main>
     <section class="hero">
-      <div class="stars" aria-hidden="true" id="stars"></div>
-      <div class="moon" aria-hidden="true"></div>
+      <div class="motes" aria-hidden="true" id="motes"></div>
       <div class="shell">
-        <div>
-          <div class="eyebrow">A Happy Yak Productions game</div>
-          <h1 class="h-display">A meadow.<br>Then a <em>world</em>.<br><span class="under">Then you.</span></h1>
-          <p class="lede">Greenhaven is a native 2D MMORPG you run on your own machine. One shared meadow, four skill ladders under your feet, three worlds on one account — and a character that is still there tomorrow.</p>
+        <div class="hero-copy">
+          <h1 class="wordmark">Greenhaven</h1>
+          <p class="hero-tag">A native 2D MMORPG. One shared world, free to play.</p>
           <div class="actions">
-            <a class="btn gold" href="https://www.dropbox.com/scl/fi/iqm4wdhoavuy34shtk5uk/GreenhavenSetup-0.1.13.exe?rlkey=kvdl89gdvqy2dt6snchp9qbjc&amp;dl=1">
-              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 5.5 10.5 4.4v7.1H3zm0 13 7.5 1.1v-7.1H3zm8.5 1.3L21 21v-8.5h-9.5zM11.5 4.2 21 3v8.5h-9.5z"/></svg>
-              Windows <span class="sub">installer</span>
+            <a class="btn gold" href="https://www.dropbox.com/scl/fi/iqm4wdhoavuy34shtk5uk/GreenhavenSetup-0.1.13.exe?rlkey=kvdl89gdvqy2dt6snchp9qbjc&amp;dl=1" aria-label="Download Greenhaven for Windows, free">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0 5-6m-5 6-5-6"/><path d="M4 21h16"/></svg>
+              Download Free
             </a>
-            <span class="vchip">v0.1.13</span>
-            <a class="btn moss" href="https://www.dropbox.com/scl/fi/879lr5t2764r40r1vs7pr/Greenhaven-linux-20260917.tar.gz?rlkey=p2utkld8kdhymnxmqbs8xuqi9&amp;st=f24wg89z&amp;dl=1">
-              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2c-2.5 0-4 2-4 4.5 0 1.3.3 2.2.1 3.2-.4 1.6-2.6 3.3-2.6 6 0 .6.1 1.2.3 1.7-.9.3-1.8.8-1.8 1.6 0 1 1.5 1.5 2.9 1.8.6 1 2.3 1.2 3.6.2.5.1 1 .1 1.5.1s1 0 1.5-.1c1.3 1 3 .8 3.6-.2 1.4-.3 2.9-.8 2.9-1.8 0-.8-.9-1.3-1.8-1.6.2-.5.3-1.1.3-1.7 0-2.7-2.2-4.4-2.6-6-.2-1 .1-1.9.1-3.2C16 4 14.5 2 12 2zm-1.5 4a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm3 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2zM12 9c1.2 0 2.5.6 2.5 1.2S13.2 11.5 12 11.5 9.5 10.8 9.5 10.2 10.8 9 12 9z"/></svg>
-              Linux <span class="sub">tar.gz</span>
-            </a>
-            <a class="btn ghost" href="play.html">How to play</a>
+            <a class="btn ghost" href="play.html"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15l13-7.5z"/></svg> How to play</a>
           </div>
-          <p class="platforms"><span>Native Rust + Bevy</span><span>No browser, no launcher</span><span>Saves every visit</span><span>Free</span></p>
-        </div>
-        <div class="stage" id="stage">
-          <div class="window">
-            <div class="bar" aria-hidden="true"><i></i><i></i><i></i><span class="title">greenhaven — world_1 — deepwood</span></div>
-            <img src="assets/gameplay.gif" width="480" height="300" alt="Greenhaven gameplay — a character walking out of Deepwood into the meadow">
-            <div class="scan" aria-hidden="true"></div>
-          </div>
-          <span class="chip xp" aria-hidden="true"><b>+25</b> Woodcutting</span>
-          <span class="chip stride" aria-hidden="true"><b>+4</b> Stride</span>
-          <span class="chip fish" aria-hidden="true"><b>+20</b> Fishing · minnow</span>
+          <p class="monoline"><span><i aria-hidden="true"></i>Windows &amp; Linux</span><span>v0.1.14</span><span>Early Development</span><span>Free</span></p>
         </div>
       </div>
-      <svg class="hills" viewBox="0 0 1440 220" preserveAspectRatio="none" aria-hidden="true">
-        <path data-depth="6" fill="#132119" d="M0 150C200 100 350 130 520 110s300-60 480-40 300 60 440 30v70H0z"/>
-        <path data-depth="14" fill="#182b1e" d="M0 190c180-40 340-50 520-30s340-30 500-10 280 40 420 20v50H0z"/>
-        <path data-depth="24" fill="#1c3323" d="M0 220v-30c220-30 380-10 560 5s320-25 480-5 260 30 400 20v10z"/>
-      </svg>
+      <div class="hero-foot"><div class="shell">
+        <span class="scroll-cue">Scroll to wander</span>
+      </div></div>
     </section>
 
-    <div class="livebar" aria-live="polite">
-      <div class="shell">
-        <span class="lb-label"><i aria-hidden="true"></i>World status</span>
-        <a class="lb-world" href="#worlds" data-world="1" data-state="unknown">World 1 <b>…</b></a>
-        <a class="lb-world" href="#worlds" data-world="2" data-state="unknown">World 2 <b>…</b></a>
-        <a class="lb-world" href="#worlds" data-world="3" data-state="unknown">World 3 <b>…</b></a>
-      </div>
-    </div>
-
-    <!-- ============ what you do ============ -->
-    <section class="sec">
-      <div class="shell">
-        <div class="sec-head reveal">
-          <div class="eyebrow">What you can do</div>
-          <h2 class="sec-title">Small verbs. A <em>real</em> world.</h2>
-          <p class="sec-sub">You wake in Deepwood, walk out along one faint track, and Ottertown is already busy being a place — with other players in it, or without.</p>
-        </div>
-        <div class="bento">
-          <article class="tile w4 feature reveal">
-            <div>
-              <span class="icon gold" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg></span>
-              <h3>Talk to the meadow</h3>
-              <p>Enter opens chat and reaches everyone in your world. Villagers talk back, and some keep shops — you start with 100 coins and a merchant who deals in sand and clay.</p>
-            </div>
-            <div class="chatlog" aria-hidden="true">
-              <div class="l"><b>Fern:</b> anyone by the quarry?</div>
-              <div class="l npc"><b>Bartholomew Goldthread:</b> Everything is for sale. Even this conversation.</div>
-              <div class="l"><b>Moss:</b> just hit 30 mining, gold rocks open</div>
-              <div class="l sys">You caught a minnow. +20 Fishing.</div>
-            </div>
-          </article>
-          <article class="tile w2 reveal" style="--d:.08s">
-            <span class="tag">Server-authoritative</span>
-            <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M16.2 7.8l-2.1 6.3-6.3 2.1 2.1-6.3z"/></svg></span>
-            <h3>The world decides</h3>
-            <p>You send where you want to go; the world server decides where you stand. No slipping through a tree on the diagonal, no rubber-banding into the river.</p>
-          </article>
-          <article class="tile w2 reveal">
-            <span class="icon teal" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg></span>
-            <h3>Characters that stay</h3>
-            <p>Name, place, skills, coins and inventory are saved with every visit. One account, three worlds. The meadow does not forget you.</p>
-          </article>
-          <article class="tile w2 reveal" style="--d:.08s">
-            <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 7 11h3l-4 6h12l-4-6h3z"/><path d="M12 17v4"/></svg></span>
-            <h3>Chop, mine, dig, fish</h3>
-            <p>Nine trees, twenty rocks, six fish, and sand and clay in the ground. Every harvest is checked by the world and every point of XP is kept.</p>
-          </article>
-          <article class="tile w2 reveal" style="--d:.16s">
-            <span class="icon gold" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9h9a3 3 0 1 0-3-3"/><path d="M4 14h13a3 3 0 1 1-3 3"/></svg></span>
-            <h3>Sprint the trails</h3>
-            <p>Hold Shift to run at double speed. Fresh ground under your feet trains Stride — loops around one tile pay nothing. The dust follows your boots.</p>
-          </article>
-          <article class="tile w3 reveal">
-            <span class="icon teal" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg></span>
-            <h3>Look closer</h3>
-            <p><kbd>F5</kbd> stands you inside your character's eyes, <kbd>M</kbd> unrolls the full world map, <kbd>P</kbd> opens your skills sheet. <kbd>F1</kbd> lists every key.</p>
-          </article>
-          <article class="tile w3 reveal" style="--d:.08s">
-            <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 21h8M12 18v3"/></svg></span>
-            <h3>Runs on your machine</h3>
-            <p>A native window, not a browser tab. Rust world server, Bevy client, PostgreSQL saves. Windows and Linux today; no account needed to wander Single player.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ skills teaser ============ -->
-    <section class="sec band" id="skills">
-      <div class="shell">
-        <div class="sec-head reveal">
-          <div class="eyebrow">Skill ladders</div>
-          <h2 class="sec-title">Train while you <em>wander</em>.</h2>
-          <p class="sec-sub">Four skills climb to 99 and every point of XP is saved.</p>
-        </div>
-        <div class="skills">
-          <article class="skill wood reveal" style="--fill:78%">
-            <span class="lvl">Level 1 – 99</span>
-            <h3>Woodcutting</h3>
-            <p>Nine tree kinds, roughly one every ten levels — from the young oak by your first campfire to the elderwood at 80.</p>
-            <div class="bar" aria-hidden="true"><i></i></div>
-            <div class="xp"><span>+25 → +285 / chop</span><span>9 trees</span></div>
-          </article>
-          <article class="skill mine reveal" style="--fill:62%;--d:.08s">
-            <span class="lvl">Level 1 – 99</span>
-            <h3>Mining</h3>
-            <p>Twenty rock kinds from plain stone at level 1 to diamond at 90. Ores, gems, mithril, orichalcum. The rocks never run out.</p>
-            <div class="bar" aria-hidden="true"><i></i></div>
-            <div class="xp"><span>+20 → +340 / mine</span><span>20 rocks</span></div>
-          </article>
-          <article class="skill fish reveal" style="--fill:50%;--d:.16s">
-            <span class="lvl">Level 1 – 99</span>
-            <h3>Fishing</h3>
-            <p>Six tiers from the minnow at level 1 to the mooncale at 80. Stand still at a spot, cast, and a few seconds later something pulls back.</p>
-            <div class="bar" aria-hidden="true"><i></i></div>
-            <div class="xp"><span>+20 → +270 / catch</span><span>6 fish</span></div>
-          </article>
-          <article class="skill stride reveal" style="--fill:45%;--d:.24s">
-            <span class="lvl">Level 1 – 99</span>
-            <h3>Stride</h3>
-            <p>Hold Shift to sprint at 2× walk speed. A fresh cell pays +4 Stride XP; warm ground pays breath back, not XP.</p>
-            <div class="bar" aria-hidden="true"><i></i></div>
-            <div class="xp"><span>+4 / fresh cell</span><span>2.5 s warm trail</span></div>
-          </article>
-        </div>
-        <div class="actions reveal"><a class="btn ghost" href="skills.html">Every tree, rock and fish →</a></div>
-      </div>
-    </section>
-
-    <!-- ============ worlds ============ -->
-    <section class="sec" id="worlds">
-      <div class="shell">
-        <div class="sec-head reveal">
-          <div class="eyebrow">Three worlds, one Ottertown</div>
-          <h2 class="sec-title">Pick a world. <em>Keep</em> your account.</h2>
-          <p class="sec-sub">Press PLAY and the world chooser opens. Each world is its own copy of Ottertown with its own players. Your account works on all three; your pick is remembered between launches.</p>
-        </div>
-        <div class="worlds">
-          <article class="world reveal" data-world="1"><span class="n" aria-hidden="true">01</span><span class="live-pill" data-state="unknown"><i aria-hidden="true"></i><b>Checking…</b></span><h3>World 1</h3><p>The main meadow. Where most people wake up, and where the first campfire gets crowded.</p></article>
-          <article class="world reveal" data-world="2" style="--d:.08s"><span class="n" aria-hidden="true">02</span><span class="live-pill" data-state="unknown"><i aria-hidden="true"></i><b>Checking…</b></span><h3>World 2</h3><p>Same map, a quieter square. Good for a long uninterrupted mining session at the quarry.</p></article>
-          <article class="world reveal" data-world="3" style="--d:.16s"><span class="n" aria-hidden="true">03</span><span class="live-pill" data-state="unknown"><i aria-hidden="true"></i><b>Checking…</b></span><h3>World 3</h3><p>The spare. Lit up when the operator needs the room; otherwise it waits.</p></article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ the world ============ -->
-    <section class="sec band">
-      <div class="shell">
-        <div class="bento">
-          <div class="tile w3 reveal" style="padding:34px">
-            <div class="eyebrow">The world</div>
-            <h3 style="font-size:36px;margin-top:14px">Waking up in Deepwood.</h3>
-            <p style="font-size:16px;margin-top:8px">You open your eyes in a hidden clearing: a cold campfire, four young oaks, one faint track out. Beyond it waits a 250×250 world — a decked village square, a ring road, three timber bridges over the river, a lake with piers, an orchard, a stone circle and a quarry full of ore.</p>
-            <div class="actions"><a class="btn ghost" href="world.html">Explore the world →</a></div>
-          </div>
-          <div class="tile w3 reveal" style="--d:.1s;padding:14px">
-            <div class="mosaic" aria-hidden="true">
-              <div class="tiles">
-                <i class="fo"></i><i class="fo"></i><i class="fo"></i><i class="fo"></i><i></i><i></i><i class="fo"></i><i class="fo"></i><i class="fo"></i><i class="fo"></i>
-                <i class="fo"></i><i class="fo"></i><i></i><i></i><i></i><i class="t2"></i><i></i><i class="fo"></i><i class="fo"></i><i class="fo"></i>
-                <i></i><i></i><i class="t2"></i><i class="tr"></i><i class="tr"></i><i></i><i></i><i></i><i></i><i class="fo"></i>
-                <i></i><i class="wat"></i><i class="wat"></i><i class="wat"></i><i class="ti"></i><i class="wat"></i><i class="wat"></i><i></i><i class="st"></i><i></i>
-                <i></i><i class="wat"></i><i class="wat"></i><i class="wat"></i><i class="wat"></i><i class="wat"></i><i></i><i class="st"></i><i class="st"></i><i></i>
-                <i></i><i></i><i class="tr"></i><i class="tr"></i><i></i><i></i><i></i><i class="st"></i><i></i><i></i>
-                <i></i><i class="fire"></i><i></i><i></i><i></i><i class="tr"></i><i class="tr"></i><i></i><i></i><i></i>
-              </div>
-              <span class="walker"></span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ dev note ============ -->
-    <section class="sec tight">
-      <div class="shell">
-        <div class="note-card reveal">
-          <img src="assets/happy-yak.png" alt="Happy Yak Productions mascot — a highland yak with a green travel pack">
-          <div>
-            <blockquote>Hi. I'm Ryan, the one person making Greenhaven. It is early — really early — and you are trying it anyway. Thank you. Pick a name, walk out of the wood, and tell me what you find.</blockquote>
-            <cite>Otterdays — Happy Yak Productions</cite>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ latest news ============ -->
-    <section class="sec">
-      <div class="shell">
-        <div class="sec-head reveal">
-          <div class="eyebrow">What's new</div>
-          <h2 class="sec-title">Fresh off the <em>workbench</em>.</h2>
-        </div>
-        <div class="timeline">
-          <article class="tl reveal"><div class="when">v0.1.10 · September 2026</div><h3>One PLAY button, three worlds, a hello</h3><p>The main menu was rebuilt around a single PLAY button and a world chooser that finds Worlds 2 and 3 on its own. A short note from the dev greets you once per launch. "Remember username" on the log-in screen; passwords are deliberately never saved.</p></article>
-          <article class="tl reveal" style="--d:.08s"><div class="when">v0.1.10 · September 2026</div><h3>Chop, dig and level-up effects</h3><p>Bark chips fly off the tree, soil puffs off the spade, and a level-up shines the badge and sweeps the XP bar once. Everything respects the reduced-motion setting.</p></article>
-        </div>
-        <div class="actions reveal"><a class="btn ghost" href="news.html">All updates →</a></div>
-      </div>
-    </section>
-
-    <section class="sec tight">
+    <section class="sec tight cta-band">
       <div class="shell">
         <div class="cta reveal">
           <div class="fireflies" aria-hidden="true"><i style="--x:10%;--y:40%;--t:9s"></i><i style="--x:25%;--y:75%;--t:11s;--d:-3s;--dx:-40px"></i><i style="--x:50%;--y:15%;--t:8s;--d:-5s"></i><i style="--x:70%;--y:65%;--t:12s;--d:-1s;--dx:50px;--dy:-20px"></i><i style="--x:88%;--y:30%;--t:10s;--d:-7s"></i></div>
@@ -275,14 +69,13 @@
           <div class="actions center">
             <a class="btn gold" href="https://www.dropbox.com/scl/fi/iqm4wdhoavuy34shtk5uk/GreenhavenSetup-0.1.13.exe?rlkey=kvdl89gdvqy2dt6snchp9qbjc&amp;dl=1">Download for Windows</a>
             <a class="btn moss" href="https://www.dropbox.com/scl/fi/879lr5t2764r40r1vs7pr/Greenhaven-linux-20260917.tar.gz?rlkey=p2utkld8kdhymnxmqbs8xuqi9&amp;st=f24wg89z&amp;dl=1">Download for Linux</a>
-            <a class="btn ghost" href="play.html">How to play</a>
+            <a class="btn ghost" href="world.html">See the world</a>
           </div>
-          <p class="micro">v0.1.13 · EARLY DEVELOPMENT · WINDOWS &amp; LINUX</p>
+          <p class="micro">v0.1.14 · EARLY DEVELOPMENT · WINDOWS &amp; LINUX</p>
         </div>
       </div>
     </section>
   </main>
-
 
   <footer class="site">
     <div class="shell foot">
@@ -303,10 +96,10 @@
       </div>
       <div class="f-meta">
         <span>&copy; <span id="year">2026</span> Happy Yak Productions</span>
-        <span><code>rust</code> world server · <code>bevy 0.19</code> client · <code>postgres</code> saves · <code>v0.1.13</code></span>
+        <span><code>rust 1.95</code> world server · <code>bevy 0.19.1</code> client · <code>postgresql 18</code> saves · <code>v0.1.14</code></span>
       </div>
       <div class="f-thanks">
-        <span>Built by <strong>Otterdays</strong> · network help from <strong>Antares</strong> · with a quiet shoutout to <code>Qwen-3.8-Flash</code>, <code>Opus&nbsp;5</code>, <code>Opus&nbsp;5.5</code> &amp; <code title="the sleeper model">Qwen&nbsp;Sonus</code></span>
+        <span>Built by <strong>Otterdays</strong> · with a quiet shoutout to <code>Qwen-3.8-Flash</code>, <code>DeepSeek-V4.1-Flash</code>, <code>Opus-5</code>, <code>Opus-5.5</code>, <code>Sonnet-5.5</code> &amp; <code title="the sleeper model">Sonus</code></span>
       </div>
     </div>
   </footer>

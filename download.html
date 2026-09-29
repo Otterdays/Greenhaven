@@ -17,7 +17,6 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<body>
   <header class="site" id="header">
     <div class="shell">
       <a class="brand" href="index.html">
@@ -39,7 +38,7 @@
 
   <div class="announce" role="status">
     <span class="dot" aria-hidden="true"></span>
-    <span><strong>v0.1.13</strong> is here</span>
+    <span><strong>v0.1.14</strong> is here</span>
     <span class="badge">EARLY DEV</span>
   </div>
 
@@ -47,7 +46,7 @@
     <section class="page-head">
       <div class="stars" aria-hidden="true" id="stars"></div>
       <div class="shell">
-        <div class="eyebrow">Download · v0.1.13</div>
+        <div class="eyebrow">Download · v0.1.14</div>
         <h1>The meadow is<br><em>open</em>.</h1>
         <p class="lede">Free. No launcher, no browser, no account needed to wander Single player. Make an account inside the game when you want your character kept.</p>
       </div>
@@ -59,8 +58,8 @@
           <article class="dl reveal">
             <div class="os"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 5.5 10.5 4.4v7.1H3zm0 13 7.5 1.1v-7.1H3zm8.5 1.3L21 21v-8.5h-9.5zM11.5 4.2 21 3v8.5h-9.5z"/></svg>Windows</div>
             <ul><li>Windows 10 / 11, 64-bit</li><li>Installer with Start-menu shortcut</li><li>Any GPU with Vulkan or DirectX 12</li></ul>
-            <a class="btn gold" href="https://www.dropbox.com/scl/fi/iqm4wdhoavuy34shtk5uk/GreenhavenSetup-0.1.13.exe?rlkey=kvdl89gdvqy2dt6snchp9qbjc&amp;dl=1">Download GreenhavenSetup-0.1.13.exe</a>
-            <span class="vchip">v0.1.13 · latest</span>
+            <a class="btn gold" href="https://www.dropbox.com/scl/fi/iqm4wdhoavuy34shtk5uk/GreenhavenSetup-0.1.13.exe?rlkey=kvdl89gdvqy2dt6snchp9qbjc&amp;dl=1">Download GreenhavenSetup-0.1.14.exe</a>
+            <span class="vchip">v0.1.14 · latest</span>
             <span class="fine">SmartScreen may warn on an unsigned installer — More info → Run anyway.</span>
           </article>
           <article class="dl reveal" style="--d:.08s">
@@ -73,9 +72,25 @@
 
         <div class="faq reveal" style="margin-top:40px">
           <details><summary>Do I need an account?</summary><div class="a">Not to wander. Single player walks the map with no server and nothing on the wire. To keep a character across visits and worlds, create an account from the log-in screen inside the game.</div></details>
-          <details><summary>Is it really free?</summary><div class="a">Yes. There is no shop, no payment, no premium anything. Coins in the game are for the merchant.</div></details>
-          <details><summary>What is "Early Development"?</summary><div class="a">One developer, one meadow, four skills, no combat yet. Things change between versions and occasionally break. The world server is authoritative, so nothing you do can corrupt someone else's character.</div></details>
+          <details><summary>Is it really free?</summary><div class="a">Yes. No payment, no premium anything — every coin and crystal in the game is earned in the game.</div></details>
+          <details><summary>What is "Early Development"?</summary><div class="a">One developer, one meadow, four skills to 99 — and fighting has just started to be real: hostile mobs attack, damage is decided by the server, and monsters drop loot. Things change between versions and occasionally break. The world server is authoritative, so nothing you do can corrupt someone else's character.</div></details>
           <details><summary>Where is my character saved?</summary><div class="a">On the world server, in PostgreSQL, keyed to your account. Positions flush every five seconds and when you leave; XP and inventory are written when they change.</div></details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ worlds ============ -->
+    <section class="sec" id="worlds">
+      <div class="shell">
+        <div class="chapter" aria-hidden="true"><span>Three worlds, one Ottertown</span></div>
+        <div class="sec-head reveal" style="margin-bottom:30px">
+          <h2 class="sec-title">Pick a world. <em>Keep</em> your account.</h2>
+          <p class="sec-sub">Press PLAY and the world chooser opens. Each world is its own copy of Ottertown with its own players. Your account works on all three; your pick is remembered between launches.</p>
+        </div>
+        <div class="worlds">
+          <article class="world reveal" data-world="1"><span class="n" aria-hidden="true">01</span><span class="live-pill" data-state="unknown"><i aria-hidden="true"></i><b>Checking…</b></span><h3>World 1</h3><p>The main meadow. Where most people wake up, and where the first campfire gets crowded.</p></article>
+          <article class="world reveal" data-world="2" style="--d:.08s"><span class="n" aria-hidden="true">02</span><span class="live-pill" data-state="unknown"><i aria-hidden="true"></i><b>Checking…</b></span><h3>World 2</h3><p>Same map, a quieter square. Good for a long uninterrupted mining session at the quarry.</p></article>
+          <article class="world reveal" data-world="3" style="--d:.16s"><span class="n" aria-hidden="true">03</span><span class="live-pill" data-state="unknown"><i aria-hidden="true"></i><b>Checking…</b></span><h3>World 3</h3><p>The spare. Lit up when the operator needs the room; otherwise it waits.</p></article>
         </div>
       </div>
     </section>
@@ -114,10 +129,10 @@
       </div>
       <div class="f-meta">
         <span>&copy; <span id="year">2026</span> Happy Yak Productions</span>
-        <span><code>rust</code> world server · <code>bevy 0.19</code> client · <code>postgres</code> saves · <code>v0.1.13</code></span>
+        <span><code>rust 1.95</code> world server · <code>bevy 0.19.1</code> client · <code>postgresql 18</code> saves · <code>v0.1.14</code></span>
       </div>
       <div class="f-thanks">
-        <span>Built by <strong>Otterdays</strong> · network help from <strong>Antares</strong> · with a quiet shoutout to <code>Qwen-3.8-Flash</code>, <code>Opus&nbsp;5</code>, <code>Opus&nbsp;5.5</code> &amp; <code title="the sleeper model">Qwen&nbsp;Sonus</code></span>
+        <span>Built by <strong>Otterdays</strong> · with a quiet shoutout to <code>Qwen-3.8-Flash</code>, <code>DeepSeek-V4.1-Flash</code>, <code>Opus-5</code>, <code>Opus-5.5</code>, <code>Sonnet-5.5</code> &amp; <code title="the sleeper model">Sonus</code></span>
       </div>
     </div>
   </footer>

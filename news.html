@@ -4,19 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>News — Greenhaven</title>
-  <meta name="description" content="What changed in each Greenhaven build, newest first.">
+  <meta name="description" content="Everything new in Greenhaven, the native 2D MMORPG: builds, features and world changes, newest first.">
   <meta name="theme-color" content="#0c1510">
   <meta property="og:title" content="News — Greenhaven">
-  <meta property="og:description" content="What changed in each Greenhaven build, newest first.">
+  <meta property="og:description" content="Everything new in Greenhaven, the native 2D MMORPG: builds, features and world changes, newest first.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://otterdays.github.io/Greenhaven/news.html">
-  <meta property="og:image" content="https://otterdays.github.io/Greenhaven/assets/happy-yak.png">
+  <meta property="og:image" content="assets/happy-yak.png">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <script>document.documentElement.classList.replace('no-js','js')</script>
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
 <body>
   <header class="site" id="header">
     <div class="shell">
@@ -39,7 +37,7 @@
 
   <div class="announce" role="status">
     <span class="dot" aria-hidden="true"></span>
-    <span><strong>v0.1.13</strong> is here</span>
+    <span><strong>v0.1.14</strong> is here</span>
     <span class="badge">EARLY DEV</span>
   </div>
 
@@ -47,26 +45,151 @@
     <section class="page-head">
       <div class="stars" aria-hidden="true" id="stars"></div>
       <div class="shell">
-        <div class="eyebrow">What's new</div>
+        <div class="eyebrow">Dev log · newest first</div>
         <h1>Fresh off the<br><em>workbench</em>.</h1>
-        <p class="lede">Every build, newest first. It is early development — things change between versions, and this is where they get written down.</p>
+        <p class="lede">Every build of Greenhaven, filed the moment it ships. Filter by what you care about — the full release index sits at the bottom of the page.</p>
       </div>
     </section>
 
     <section class="sec tight">
       <div class="shell">
-        <div class="timeline">
-        <div class="timeline">
-          <article class="tl reveal"><div class="when">v0.1.10 · September 2026</div><h3>One PLAY button, three worlds, a hello</h3><p>The main menu was rebuilt around a single PLAY button and a world chooser that finds Worlds 2 and 3 on its own. A short note from the dev greets you once per launch. "Remember username" on the log-in screen; passwords are deliberately never saved.</p></article>
-          <article class="tl reveal" style="--d:.08s"><div class="when">v0.1.10 · September 2026</div><h3>Chop, dig and level-up effects</h3><p>Bark chips fly off the tree, soil puffs off the spade, and a level-up shines the badge and sweeps the XP bar once. Everything respects the reduced-motion setting.</p></article>
-          <article class="tl reveal" style="--d:.16s"><div class="when">v0.1.8 · September 2026</div><h3>Fishing joins the ladders</h3><p>Six tiers of fish on one shared harvest contract. Nodes deplete and respawn on the server, so the pond you fish is the pond everyone fishes.</p></article>
-          <article class="tl reveal" style="--d:.24s"><div class="when">v0.1.8 · September 2026</div><h3>The town gets its name</h3><p>Ottertown, on the gate sign and on the map panel. The Historian remembers what it was called before.</p></article>
+
+        <!-- ===== filter bar ===== -->
+        <div class="news-bar" role="group" aria-label="Filter news by topic">
+          <button class="fchip on" data-filter="all" aria-pressed="true">All <b>15</b></button>
+          <button class="fchip" data-filter="release" aria-pressed="false">Releases</button>
+          <button class="fchip" data-filter="combat" aria-pressed="false">Combat</button>
+          <button class="fchip" data-filter="world" aria-pressed="false">World</button>
+          <button class="fchip" data-filter="seasons" aria-pressed="false">Seasons</button>
+          <button class="fchip" data-filter="economy" aria-pressed="false">Economy</button>
+          <button class="fchip" data-filter="comfort" aria-pressed="false">Comfort</button>
         </div>
+
+        <!-- ===== card grid ===== -->
+        <div class="news-grid" id="news-grid">
+
+          <article class="ncard featured reveal" data-cat="release combat seasons" data-ver="0.1.14">
+            <div class="meta"><span class="vtag">v0.1.14</span><time>28 Sep 2026</time><span class="cat">Release · Halloween</span></div>
+            <h2>Hallowmere opens — and fighting got real</h2>
+            <p>A walled Halloween town now sits north of where you spawn: graveyard, haunted high street, giant-pumpkin plaza, hay maze and a festival green, all lit by ghost-green lanterns. Seven new creatures stalk it — from a shy black cat to <strong>Jack Hollowgourd, the Pumpkin King</strong> (lv 45) — and hostile mobs now attack <em>you</em>: server-dealt damage, a health bar that counts down, respawn at the village with nothing lost.</p>
+            <div class="nstats"><span>7 new mobs + boss</span><span>18 props · 6 grounds</span><span>costumes &amp; brewing</span><span>trick-or-treat gifts</span><span>fog, wisps &amp; lightning</span></div>
+          </article>
+
+          <article class="ncard reveal" data-cat="combat" data-ver="0.1.14">
+            <div class="meta"><span class="vtag">v0.1.14</span><time>28 Sep 2026</time><span class="cat">Combat</span></div>
+            <h3>Pets you earn in the wild</h3>
+            <p>The black cat and vampire bat are now fightable mobs — and each has a low chance of dropping its matching familiar when you slay it. A pet earned this way is yours for good; summon it from the Pets tab. Monsters with a loot table drop their items on death now, too.</p>
+          </article>
+
+          <article class="ncard reveal" data-cat="comfort" data-ver="0.1.14">
+            <div class="meta"><span class="vtag">v0.1.14</span><time>28 Sep 2026</time><span class="cat">Feel</span></div>
+            <h3>A closer camera and a livelier body</h3>
+            <p>The view starts nearer your character and now zooms to 600% (was 400%). Your character breathes, shifts its weight while idle, sprints in a smooth 4-frame run, and winds up and follows through on every attack — 21 poses per direction.</p>
+          </article>
+
+          <article class="ncard featured reveal" data-cat="release combat economy world" data-ver="0.1.13">
+            <div class="meta"><span class="vtag">v0.1.13</span><time>25 Sep 2026</time><span class="cat">Release · The big one</span></div>
+            <h2>Forty times the world, and your first punch</h2>
+            <p>The biggest update Greenhaven has had. The starting world grew to <strong>256×192</strong> — roads, two wooden bridges, fishing ponds, four tree species and meadows in bloom, all loopable on foot. You can punch things: click a monster and combat skills (Attack, Strength, Defence, Archery, Wizardry, Health) work the way the old-school greats do. Coins got a bag with five tiers, every chest became your bank, and merchants can stock any item in the game.</p>
+            <div class="nstats"><span>256×192 starter world</span><span>6 combat skills</span><span>coin bag · 5 tiers</span><span>250-stack bank</span><span>chat &amp; music rework</span></div>
+          </article>
+
+          <article class="ncard reveal" data-cat="world comfort" data-ver="0.1.13">
+            <div class="meta"><span class="vtag">v0.1.13</span><time>25 Sep 2026</time><span class="cat">World</span></div>
+            <h3>Meet Rudolph</h3>
+            <p>A gift-only reindeer pet that follows you everywhere, fetches coins off the ground, joins your fights, carries four slots of your bag — and levels up doing all of it. Other players see him trotting along beside you.</p>
+          </article>
+
+          <article class="ncard reveal" data-cat="comfort" data-ver="0.1.13">
+            <div class="meta"><span class="vtag">v0.1.13</span><time>25 Sep 2026</time><span class="cat">Comfort</span></div>
+            <h3>Chat that waits, music that stays</h3>
+            <p>Chat now stays on screen while you type and messages fade one at a time. Background music plays through the whole world, online and in Single player — including <em>Moon Over Bamboo</em>, a new original lullaby. And the yellow harvest boxes are gone: a pointing hand shows what you can click.</p>
+          </article>
+
+          <article class="ncard reveal" data-cat="economy" data-ver="0.1.13">
+            <div class="meta"><span class="vtag">v0.1.13</span><time>25 Sep 2026</time><span class="cat">Economy</span></div>
+            <h3>Shops, rebuilt</h3>
+            <p>The shop panel is two sides — buy left, sell right — with tooltips for every item. Merchants stock anything, up to 40 items each, and limited stock stays sold after a restart. A rare item is finally, properly rare.</p>
+          </article>
+
+          <article class="ncard reveal" data-cat="seasons" data-ver="0.1.13">
+            <div class="meta"><span class="vtag">v0.1.13</span><time>25 Sep 2026</time><span class="cat">Seasons</span></div>
+            <h3>The Christmas wardrobe completed</h3>
+            <p>Santa hat, festive jumper, trousers and elf boots — plus the Nutcracker hammer, which earns 10% extra smithing XP. New Skilling slot frees a bag space for your tools, and bronze axes and pickaxes became smithable.</p>
+          </article>
+
+          <article class="ncard reveal" data-cat="seasons world" data-ver="0.1.12">
+            <div class="meta"><span class="vtag">v0.1.12</span><time>24 Sep 2026</time><span class="cat">Seasons</span></div>
+            <h3>String lights and a dozen new props</h3>
+            <p>RGB bulbs now run between any two lamps — placed in the painter, moving with the lamps, rainbow-cycling in game. Twelve new festive pieces joined the palette: a decorated tree, snowman, sleigh, gingerbread house and more.</p>
+          </article>
+
+          <article class="ncard reveal" data-cat="world" data-ver="0.1.12">
+            <div class="meta"><span class="vtag">v0.1.12</span><time>24 Sep 2026</time><span class="cat">World</span></div>
+            <h3>The meadow got untidy (on purpose)</h3>
+            <p>Organic dirt paths with worn edges, ground patches, per-cell variation on every tree and rock, new chest finishes, five new environments — and a shaded, rimmed minimap that finally reads at a glance.</p>
+          </article>
+
+          <article class="ncard reveal" data-cat="comfort" data-ver="0.1.11">
+            <div class="meta"><span class="vtag">v0.1.11</span><time>22 Sep 2026</time><span class="cat">Feel</span></div>
+            <h3>Your character, sharper and livelier</h3>
+            <p>Player art redone at three times the detail, a real two-step run animation, blinking during idle breath — and <kbd>Left Ctrl</kbd> to crouch into a quiet kneel-walk. The premium shop got an evergreen-and-gold storefront, and <em>Willowmere Lullaby</em> joined the playlist.</p>
+          </article>
+
+          <article class="ncard reveal" data-cat="release comfort" data-ver="0.1.10">
+            <div class="meta"><span class="vtag">v0.1.10</span><time>September 2026</time><span class="cat">Release</span></div>
+            <h3>One PLAY button, three worlds, a hello</h3>
+            <p>The main menu was rebuilt around a single PLAY button and a world chooser that finds Worlds 2 and 3 on its own. A short note from the dev greets you once per launch. "Remember username" on the log-in screen; passwords are deliberately never saved.</p>
+          </article>
+
+          <article class="ncard reveal" data-cat="comfort" data-ver="0.1.10">
+            <div class="meta"><span class="vtag">v0.1.10</span><time>September 2026</time><span class="cat">Feel</span></div>
+            <h3>Chop, dig and level-up effects</h3>
+            <p>Bark chips fly off the tree, soil puffs off the spade, and a level-up shines the badge and sweeps the XP bar once. Everything respects the reduced-motion setting.</p>
+          </article>
+
+          <article class="ncard reveal" data-cat="release" data-ver="0.1.8">
+            <div class="meta"><span class="vtag">v0.1.8</span><time>September 2026</time><span class="cat">Release</span></div>
+            <h3>Fishing joins the ladders</h3>
+            <p>Six tiers of fish on one shared harvest contract. Nodes deplete and respawn on the server, so the pond you fish is the pond everyone fishes.</p>
+          </article>
+
+          <article class="ncard reveal" data-cat="world" data-ver="0.1.8">
+            <div class="meta"><span class="vtag">v0.1.8</span><time>September 2026</time><span class="cat">World</span></div>
+            <h3>The town gets its name</h3>
+            <p>Ottertown, on the gate sign and on the map panel. The Historian remembers what it was called before.</p>
+          </article>
+
+        </div>
+
+        <!-- ===== release index ===== -->
+        <div class="chapter reveal" style="margin-top:56px"><span>Release index</span></div>
+        <div class="verlist reveal">
+          <a class="ver" href="#" data-jump="0.1.14"><b>v0.1.14</b><time>28 Sep</time><span>Hallowmere, real fighting, earned pets, camera &amp; pose work</span></a>
+          <a class="ver" href="#" data-jump="0.1.13"><b>v0.1.13</b><time>25 Sep</time><span>256×192 world, first combat, Rudolph, coin bag, Gear Forge era</span></a>
+          <a class="ver" href="#" data-jump="0.1.12"><b>v0.1.12</b><time>24 Sep</time><span>String lights, festive props, ground variation, minimap bake</span></a>
+          <a class="ver" href="#" data-jump="0.1.11"><b>v0.1.11</b><time>22 Sep</time><span>3× character art, run &amp; crouch, shop redesign, new music</span></a>
+          <a class="ver" href="#" data-jump="0.1.10"><b>v0.1.10</b><time>Sep</time><span>World chooser, dev hello, harvest &amp; level-up effects</span></a>
+          <a class="ver" href="#" data-jump="0.1.8"><b>v0.1.8</b><time>Early Sep</time><span>Fishing, and Ottertown gets its name</span></a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============ dev note ============ -->
+    <section class="sec tight">
+      <div class="shell">
+        <div class="note-card reveal">
+          <img src="assets/happy-yak.png" alt="Happy Yak Productions mascot — a highland yak with a green travel pack">
+          <div>
+            <blockquote>Hi. I'm Ryan, the one person making Greenhaven. It is early — really early — and you are trying it anyway. Thank you. Pick a name, walk out of the wood, and tell me what you find.</blockquote>
+            <cite>Otterdays — Happy Yak Productions</cite>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="sec tight">
+    <section class="sec tight cta-band">
       <div class="shell">
         <div class="cta reveal">
           <div class="fireflies" aria-hidden="true"><i style="--x:10%;--y:40%;--t:9s"></i><i style="--x:25%;--y:75%;--t:11s;--d:-3s;--dx:-40px"></i><i style="--x:50%;--y:15%;--t:8s;--d:-5s"></i><i style="--x:70%;--y:65%;--t:12s;--d:-1s;--dx:50px;--dy:-20px"></i><i style="--x:88%;--y:30%;--t:10s;--d:-7s"></i></div>
@@ -75,11 +198,11 @@
           <p>Leave today, come back next week, and the meadow remembers where you stood.</p>
           <div class="actions center">
             <a class="btn gold" href="https://www.dropbox.com/scl/fi/iqm4wdhoavuy34shtk5uk/GreenhavenSetup-0.1.13.exe?rlkey=kvdl89gdvqy2dt6snchp9qbjc&amp;dl=1">Download for Windows</a>
-            <span class="vchip">v0.1.13</span>
+            <span class="vchip">v0.1.14</span>
             <a class="btn moss" href="https://www.dropbox.com/scl/fi/879lr5t2764r40r1vs7pr/Greenhaven-linux-20260917.tar.gz?rlkey=p2utkld8kdhymnxmqbs8xuqi9&amp;st=f24wg89z&amp;dl=1">Download for Linux</a>
             <a class="btn ghost" href="play.html">How to play</a>
           </div>
-          <p class="micro">v0.1.13 · EARLY DEVELOPMENT · WINDOWS &amp; LINUX</p>
+          <p class="micro">v0.1.14 · EARLY DEVELOPMENT · WINDOWS &amp; LINUX</p>
         </div>
       </div>
     </section>
@@ -105,10 +228,10 @@
       </div>
       <div class="f-meta">
         <span>&copy; <span id="year">2026</span> Happy Yak Productions</span>
-        <span><code>rust</code> world server · <code>bevy 0.19</code> client · <code>postgres</code> saves · <code>v0.1.13</code></span>
+        <span><code>rust 1.95</code> world server · <code>bevy 0.19.1</code> client · <code>postgresql 18</code> saves · <code>v0.1.14</code></span>
       </div>
       <div class="f-thanks">
-        <span>Built by <strong>Otterdays</strong> · network help from <strong>Antares</strong> · with a quiet shoutout to <code>Qwen-3.8-Flash</code>, <code>Opus&nbsp;5</code>, <code>Opus&nbsp;5.5</code> &amp; <code title="the sleeper model">Qwen&nbsp;Sonus</code></span>
+        <span>Built by <strong>Otterdays</strong> · with a quiet shoutout to <code>Qwen-3.8-Flash</code>, <code>DeepSeek-V4.1-Flash</code>, <code>Opus-5</code>, <code>Opus-5.5</code>, <code>Sonnet-5.5</code> &amp; <code title="the sleeper model">Sonus</code></span>
       </div>
     </div>
   </footer>
