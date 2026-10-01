@@ -180,6 +180,7 @@ nav.top .btn::after{display:none}
 /* ---------- sections ---------- */
 .sec{padding:clamp(64px,8vw,110px) 0;position:relative}
 .sec.tight{padding-top:0}
+#download{scroll-margin-top:90px}
 .sec.band{background:linear-gradient(180deg,transparent,rgba(241,233,210,.03) 20%,rgba(241,233,210,.03) 80%,transparent)}
 .divider{height:1px;background:linear-gradient(90deg,transparent,var(--line-2),transparent)}
 
